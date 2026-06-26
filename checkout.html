@@ -3,30 +3,25 @@
 <head>
 <title>Kavya's Café</title>
 </head>
+<link rel="stylesheet" href="style.css">
+<a link rel="home" href="index.html">Home</a>
+<a link rel="menu" href="menu.html">Menu</a>
+<a link rel="order" href="order.html">Order</a>
 <body>
 
 <h1>Kavya's Café</h1>
 <p>Welcome to Kavya's Café!</p>
   
-<button onclick="start()">Order</button>
-<br><label for="Name_Field">Name:</label>
-<input type="text" id="Name_Field" name="Name_Field">
-<br><label for="PocketMoneyField">Pocket Money:</label>
-<input type="number" id="PocketMoneyField" name="PocketMoneyField"> 
-<br><label for="CardNumberField">Card Number:</label>
-<input type="text" id="CardNumberField" name="CardNumberField">
-<br><label for="CardPinField">Card Pin:</label>
-<input type="text" id="CardPinField" name="CardPinField">
-<br><label for="CardBalanceField">Card Balance:</label>
-<input type="number" id="CardBalanceField" name="CardBalanceField">
-<br><label for="CardExpiryDateField">Card Expiry Date:</label> 
-<input type="text" id="CardExpiryDateField" name="CardExpiryDateField">
-<br><label for="CardHolderNameField">Card Holder Name:</label>
-<input type="text" id="CardHolderNameField" name="CardHolderNameField">
-<br><label for="ProductsPriceField">Products Price:</label>
-<input type="number" id="ProductsPriceField" name="ProductsPriceField"> 
 
-<br>< on
+<div id="spaceForJavaScriptOutput"></div>
+
+<label for="nameField">Name:</label></br>
+<input type="text" id="nameField" name="nameField"><br>
+
+<label for="pocketMoneyField">Pocket Money:</label></br>
+<input type="number" id="pocketMoneyField" name="pocketMoneyField"><br>
+
+<br><input type="submit" onclick="getFormInput()" value="Submit"></br>
 
 <script src="script.js">
 </script>
