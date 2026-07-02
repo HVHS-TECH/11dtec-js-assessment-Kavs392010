@@ -39,6 +39,30 @@ text-decoration-style: unset;
 text-underline-offset: 6px;
 }
 
+/*Hero Section*/
+.slider{
+position: relative;
+overflow: hidden;
+border-radius: 20px;
+margin:20px;
+background-color: #25140B;
+padding: 10px;
+}
+
+.slides{
+  display: grid;
+  grid-column: 1px;
+  transition: transform 0.4s ease;
+  gap: 10px;
+  align-items: center;
+}
+
+.slides img{
+width: 400px;
+height: 420px;
+border-radius: 15px;
+}
+
 grid-column  {
  display: grid;
  background: #B08968 
