@@ -63,6 +63,14 @@ height: 420px;
 border-radius: 15px;
 }
 
+.hero {
+gap: 20px;
+padding: 15px;
+background-color:#5A2E1F;
+border-radius: 20px;
+color: #E9AFAD;
+}
+
 
 /*arrows*/
 .prev{
