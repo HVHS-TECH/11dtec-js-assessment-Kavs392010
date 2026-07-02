@@ -63,9 +63,32 @@ height: 420px;
 border-radius: 15px;
 }
 
-grid-column  {
- display: grid;
- background: #B08968 
+
+/*arrows*/
+.prev{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: #5A2E1F;
+border: none;
+padding: 10px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.prev {
+left: 10px;
+}
+
+.next{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: #5A2E1F;
+border: none;
+padding: 10px;
+cursor: pointer;
+border-radius: 10px;
 }
 
 
