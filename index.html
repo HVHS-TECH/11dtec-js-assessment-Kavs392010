@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kavya's Café</title>
-</head>
+<title>Le Café Valerio</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="cappuccino.jpg">
+</head>
 
-<nav>
-  <a link rel="home" href="index.html">Home</a>
-  <a link rel="menu" href="menu.html">Menu</a>
-  <a link rel="order" href="order.html">Order</a>
-  <a link rel="checkout" href="checkout.html">Checkout</a>
-</nav>
 
 <body>
+<header class="top-bar">
 
-<h1>Kavya's Café</h1>
-<p>Welcome to Kavya's Café!</p>
+<div class="logo">
+<img src="cappuccino.jpg" alt="Logo">
+<span>Le Café Valerio</span>
+</div>
+<input type="text" placeholder="Search..." class="search-bar" id="searchBar">
+<button class="search-button">🔍</button>
 
-  <div class="slider-container">
+</header>
 
-    <div class="slides"><img src="cappuccino.jpg" alt="Slide 1"></div>
-    <div class="slides"><img src="cappucino 2.jpg" alt="Slide 2"></div>
-    <div class="slides"><img src="cappucino 3.jpg" alt="Slide 3"></div>
 
-   <button class="prev" onclick="moveSlide('hero', -1)"><</button>
-   <button class="next" onclick="moveSlide('hero', 1)">></button>
-  </div>
+<div class="hero-slider">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="cart.html">Your Cart</a>
+  <a href="checkout.html">Checkout</a>
+  <a href="order.html">Your Orders</a>
+</nav>
+
+  <img class="hero-slide" src="cappuccino.jpg">
+  <img class="hero-slide" src="cappucino 2.jpg">
+  <img class="hero-slide" src="cappucino 3.jpg">
+
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
 
 <script src="script.js">
 </script>
