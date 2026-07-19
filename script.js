@@ -5,8 +5,7 @@ const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const SEARCH_BAR = document.getElementById("searchBar");
 
 /***** Image Slider *****/
-let slideIndex = 0;
-
+ let slideIndex = 0;
 const slides = document.getElementsByClassName("hero-slide");
 
 function showSlide() {
@@ -34,9 +33,37 @@ setInterval(function () {
 }, 3000);
 
 /***** Main Code *****/
-console.log(userName);
-console.log(pocketMoney);
 
+/***** Menu *****/
+
+const MENU = [
+  { name: "Classic Butter Croissant",
+    price: "$3.50",
+    description: "A flaky, buttery croissant filled with rich, creamy butter.",
+    image: ".jpg"
+  },
+  { name: "Pain au Chocolat",
+    price: "$6.00",
+    description: "A classic French pastry filled with rich, dark chocolate.",
+    image: ".jpg"
+  },
+  { name: "Almond Croissant",
+    price: "$6.50",
+    description: "A flaky croissant filled with almond cream and topped with sliced almonds.",
+    image: ".jpg"
+  },
+  { name: "Raspberry Danish",
+    price: "$5.00",
+    description: "A sweet pastry filled with raspberry jam and cream cheese.",
+    image: ".jpg"
+  },
+  { name: "Cinnamon Roll",
+    price: "$4.50",
+    description: "A soft, sweet roll filled with cinnamon and sugar, topped with cream cheese icing.",
+    image: ".jpg"
+  },
+  {name: }
+]
 
 /***** Functions *****/
 
