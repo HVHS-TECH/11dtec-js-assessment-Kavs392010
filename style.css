@@ -39,9 +39,6 @@
   display: flex;
   justify-content: center;
   margin: 15px 0;
-}
-
-.search-bar input {
   padding: 10px 15px;
   border-radius: 25px 0 0 25px;
   border: none;
@@ -50,6 +47,7 @@
   background-color: #5A2E1F;
   color: #E9AFAD;
 }
+
 
 .search-bar input::placeholder {
   color: #E9AFAD;
@@ -284,4 +282,17 @@ footer {
   margin-bottom:30px;
   border: 2px solid #5A2E1F;
   border-radius: 10px 10px;
+}
+
+.logo1 {
+  display: flex;
+  align-items: top;
+  gap: 10px;
+  color: #E9AFAD;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo2 img {
+  width: 50px;
 }
