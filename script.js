@@ -4,6 +4,8 @@ const NAME_FEILD = document.getElementById("nameField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const SEARCH_BAR = document.getElementById("searchBar");
 const CART=[];
+const CARD=[];
+const CARD_NUMBER_= [];
 
 /***** Image Slider *****/
  let slideIndex = 0;
