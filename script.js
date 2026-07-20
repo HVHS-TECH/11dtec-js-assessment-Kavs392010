@@ -1079,21 +1079,6 @@ const CUSTOMIZE_DINNER_DRINK= [
   "After-Dinner Affogato",
 ]
 
-displayMENU("Breakfast", BREAKFAST);
-displayMENU("Breakfast Specials", BREAKFAST_SPECIALS);
-displayMENU("Breakfast Drinks", BREAKFAST_SPECIALS_DRINK);
-displayMENU("Lunch", LUNCH);
-displayMENU("Lunch Specials", LUNCH_SPECIALS);
-displayMENU("Lunch Drinks", LUNCH_SPECIALS_DRINK);
-displayMENU("Dinner", DINNER);
-displayMENU("Dinner Specials", DINNER_SPECIALS);
-displayMENU("Dinner Drinks", DINNER_SPECIALS_DRINK);
-displayMENU("Coffee", COFFEE);
-displayMENU("Signature Coffee", SIGNATURE_COFFEE);
-displayMENU("Desserts", DESSERTS);
-displayMENU("Drinks", DRINKS);
-displayMENU("Savoury", SAVOURY);
-
 const MENU = [BREAKFAST, BREAKFAST_SPECIALS, BREAKFAST_SPECIALS_DRINK, LUNCH, LUNCH_SPECIALS, LUNCH_SPECIALS_DRINK, DINNER, DINNER_SPECIALS, DINNER_SPECIALS_DRINK, COFFEE, SIGNATURE_COFFEE, DESSERTS, DRINKS, SAVOURY, CUSTOMIZE, CUSTOMIZE_BREAKFAST, CUSTOMIZE_BREAKFAST_DRINK, CUSTOMIZE_LUNCH, CUSTOMIZE_LUNCH_DRINK, CUSTOMIZE_DINNER, CUSTOMIZE_DINNER_DRINK];
   
 /***** Functions *****/
@@ -1141,3 +1126,18 @@ function getFormInput(){
   OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
 }
 
+/*Displays */
+displayMENU("Breakfast", BREAKFAST);
+displayMENU("Breakfast Specials", BREAKFAST_SPECIALS);
+displayMENU("Breakfast Drinks", BREAKFAST_SPECIALS_DRINK);
+displayMENU("Lunch", LUNCH);
+displayMENU("Lunch Specials", LUNCH_SPECIALS);
+displayMENU("Lunch Drinks", LUNCH_SPECIALS_DRINK);
+displayMENU("Dinner", DINNER);
+displayMENU("Dinner Specials", DINNER_SPECIALS);
+displayMENU("Dinner Drinks", DINNER_SPECIALS_DRINK);
+displayMENU("Coffee", COFFEE);
+displayMENU("Signature Coffee", SIGNATURE_COFFEE);
+displayMENU("Desserts", DESSERTS);
+displayMENU("Drinks", DRINKS);
+displayMENU("Savoury", SAVOURY);
