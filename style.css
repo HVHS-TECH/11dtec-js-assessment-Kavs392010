@@ -55,6 +55,7 @@
 }
 
 .search-bar button {
+  display: block;
   padding: 10px 15px;
   border: none;
   background-color: #FFB6C1;
