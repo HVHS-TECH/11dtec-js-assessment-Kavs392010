@@ -277,7 +277,6 @@ cursor: pointer;
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #25140B;
   padding: 10px 20px;
   margin-bottom:30px;
