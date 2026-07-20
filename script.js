@@ -3,6 +3,7 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 const NAME_FEILD = document.getElementById("nameField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const SEARCH_BAR = document.getElementById("searchBar");
+const CART=[];
 
 /***** Image Slider *****/
  let slideIndex = 0;
@@ -1095,7 +1096,7 @@ function displayMENU(title, menuArray) {
       "<h3>" + menuArray[i].name + "</h3>" +
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
-      "<button class='menuButton'>Add to Cart</button>" +
+      "<button class='menuButton' onclick='addTocart(menuArray[" + i + "]'>Add to Cart</button>" +
       "</div>";
 
   }
@@ -1142,3 +1143,9 @@ displayMENU("Signature Coffee", SIGNATURE_COFFEE);
 displayMENU("Desserts", DESSERTS);
 displayMENU("Drinks", DRINKS);
 displayMENU("Savoury", SAVOURY);
+
+function addTocart (index, menuArray) {
+  CART.push(menuArray[index]);
+
+  OUTPUT.innerHTML= menuArray[index].name + "has been added to your cart!"
+}
