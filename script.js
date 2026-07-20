@@ -1087,16 +1087,17 @@ function displayMENU(title, menuArray) {
 
   MENU_CONTAINER.innerHTML += "<h2>" + title + "</h2>";
 
-  for (let i = 0; i < menuArray.length; i++){
+  for (let i = 0; i < menuArray.length; i++) {
 
-  MENU_CONTAINER.innerHTML += 
-  + <div class="menu"> +
-  "<img src='" + menuArray[i].image + "'></img>" +
-  "<h3>" + menuArray[i].name + "</h3>" +
-  "<p>" + menuArray[i].description + "</p>" +
-  "<h4>$" + menuArray[i].price + "</h4>" +
-<button>Add to Cart</button>
-</div>
+    MENU_CONTAINER.innerHTML +=
+      "<div class='menu'>" +
+      "<img src='" + menuArray[i].image + "'>" +
+      "<h3>" + menuArray[i].name + "</h3>" +
+      "<p>" + menuArray[i].description + "</p>" +
+      "<h4>$" + menuArray[i].price + "</h4>" +
+      "<button>Add to Cart</button>" +
+      "</div>";
+
   }
 }
 
