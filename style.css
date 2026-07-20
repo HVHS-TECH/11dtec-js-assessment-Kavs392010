@@ -218,6 +218,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: medium;
 color: #7A553A;
 background-color: #ffc6d0;
+display:block;
+align-items: Center;
 }
 
 /**Menu**/
