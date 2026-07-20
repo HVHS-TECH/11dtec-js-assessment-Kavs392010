@@ -1095,7 +1095,7 @@ function displayMENU(title, menuArray) {
       "<h3>" + menuArray[i].name + "</h3>" +
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
-      "<button>Add to Cart</button>" +
+      "<button class='menuButton'>Add to Cart</button>" +
       "</div>";
 
   }
