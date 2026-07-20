@@ -211,6 +211,48 @@ body {
     color: #D6BFA6;
 }
 
+/**Header**/
+h1 {
+font:bolder;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: medium;
+color: #7A553A;
+background-color: #ffc6d0;
+}
+
+/**Menu**/
+.menuContainer{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.menuItem{
+  width:250px;
+  margin-top: 40px;
+  color: #E9AFAD;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.menu img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius:10px;
+}
+
+.menu button{
+background: #FFB6C1;
+border:none;
+border-radius: 20px;
+padding:10px 20px;
+margin-top: 10px;
+cursor: pointer;
+}
+
 /*Footer Styling*/
 footer {
   display:inline;
