@@ -276,9 +276,12 @@ cursor: pointer;
 
 /*Footer Styling*/
 footer {
-  display:inline;
-  padding-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #25140B;
-  color: #E9AFAD;
-  margin-top: 20px;
+  padding: 10px 20px;
+  margin-bottom:30px;
+  border: 2px solid #5A2E1F;
+  border-radius: 10px 10px;
 }
