@@ -285,15 +285,20 @@ footer {
   border-radius: 10px 10px;
 }
 
-.logo1 {
-  display: flex;
-  align-items: top;
+footer h1 {
   gap: 10px;
   color: #E9AFAD;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 18px;
 }
 
-.logo2 img {
+footer p {
+  gap: 10px;
+  color: #E9AFAD;
+  font-weight:bold;
+  font-size: 18px;
+}
+
+footer img {
   width: 50px;
 }
