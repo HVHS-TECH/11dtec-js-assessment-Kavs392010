@@ -1148,4 +1148,5 @@ function addTocart (index, menuArray) {
   CART.push(menuArray[index]);
 
   OUTPUT.innerHTML= menuArray[index].name + "has been added to your cart!"
-}
+};
+
