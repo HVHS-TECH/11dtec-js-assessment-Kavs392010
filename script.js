@@ -1090,7 +1090,7 @@ function displayMENU(title, menuArray) {
   for (let i = 0; i < menuArray.length; i++){
 
   MENU_CONTAINER.innerHTML += 
-  <div class="menu">
+  + <div class="menu"> +
   "<img src='" + menuArray[i].image + "'></img>" +
   "<h3>" + menuArray[i].name + "</h3>" +
   "<p>" + menuArray[i].description + "</p>" +
