@@ -38,17 +38,20 @@
   <button class="next" onclick="changeSlide(1)">&#10095;</button>
 </div>
   
-<div id="spaceForJavaScriptOutput">
+<label>Name:</label>
+<br><input type="text" id="customerName"><br>
 
-<label for="nameField">Name:</label></br>
-<input type="text" id="nameField" name="nameField"><br>
-
-<label for="pocketMoneyField">Pocket Money:</label></br>
-<input type="number" id="pocketMoneyField" name="pocketMoneyField" step="0.01"><br>
-</div>
+<br><Label>Payment Method:</Label><br>
+<br><select id=""paymentMethod>
+  <option>Cash</option>
+  <option>Credit Card</option>
+  <option>Apple Pay</option>
+  <option>Google Pay</option>
+</select><br>
 
 <br><button></button><input type="submit" onclick="getFormInput()" value="Submit"></button></br>
 
+<p id="spaceForJavaScriptOutput"></p>
 <footer>
 <img src="cappuccino.jpg" alt="Logo">
 <span>Le Café Valerio</span>

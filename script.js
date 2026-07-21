@@ -1125,14 +1125,6 @@ else {
 
 }
 
-
-function getFormInput(){
-  let userName = (NAME_FEILD.value);
-  OUTPUT.innerHTML = "<p>User Name: " + userName + "</p>";
-  let pocketMoney = (POCKET_MONEY_FIELD.value);
-  OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
-}
-
 function addTocart (index, title) {
 let menuArray
 
@@ -1212,6 +1204,18 @@ function removeFromCart(index){
 
   displayCART();
 }
+
+function getFormInput(){
+  let customerName = (NAME_FEILD.value);
+  OUTPUT.innerHTML = "<p>User Name: " + customerName + "</p>";
+  let paymentMethod = (PaymentMethod);
+  OUTPUT.innerHTML= "<p>Payment Method: " + paymentMethod + "</p>";
+  let 
+  let pocketMoney = (POCKET_MONEY_FIELD.value);
+  OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
+}
+
+/**If Statements **/
 
 if (document.getElementById("menuContainer")){
 displayMENU("Breakfast", BREAKFAST);
