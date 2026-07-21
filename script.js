@@ -1199,10 +1199,19 @@ function displayCART() {
       "<h3>" + CART[i].name + "</h3>" +
       "<p>" + CART[i].desciption + "</p> "
       "<h4>$" + CART[i].price + "</h4>" +
+      "<button class='menuButton' onclick='removeFromCart(" + i +")'>Remove</button>" +
       "</div>";
 
   }
 };
+
+function removeFromCart(index){
+  CART.splice(index,1);
+
+  localStorage.setItem("cart", JSON.stringify(CART));
+
+  displayCART();
+}
 
 if (document.getElementById("menuContainer")){
 displayMENU("Breakfast", BREAKFAST);
