@@ -1183,7 +1183,7 @@ CART.push(menuArray[index]);
 
 localStorage.setItem("cart", JSON.stringify(CART));
 
-OUTPUT.innerHTML = "<p>" + menuArray[index].name.price + " has been added to your cart!</p>";
+OUTPUT.innerHTML = "<p>" + menuArray[index].name + " has been added to your cart!</p>";
 };
 
 function displayCART() {
@@ -1197,9 +1197,9 @@ function displayCART() {
       "<div class='menuItem'>" +
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
-      "<p>" + CART[i].desciption + "</p> "
+      "<p>" + CART[i].description + "</p> " +
       "<h4>$" + CART[i].price + "</h4>" +
-      "<button class='menuButton' onclick='removeFromCart(" + i +")'>Remove</button>" +
+      "<button class='menuButton' onclick='removeFromCart(" + i + ")'>Remove</button>" +
       "</div>";
 
   }
