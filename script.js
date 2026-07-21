@@ -1194,7 +1194,7 @@ function displayCART() {
   for (let i = 0; i < CART.length; i++) {
 
     CART_CONTAINER.innerHTML += 
-      "<div class='menuItem'>" 
+      "<div class='menuItem'>" +
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
       "<p>" + CART[i].description + "</p> " +
