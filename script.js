@@ -1210,7 +1210,6 @@ function getFormInput(){
   OUTPUT.innerHTML = "<p>User Name: " + customerName + "</p>";
   let paymentMethod = (PaymentMethod);
   OUTPUT.innerHTML= "<p>Payment Method: " + paymentMethod + "</p>";
-  let 
   let pocketMoney = (POCKET_MONEY_FIELD.value);
   OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
 }
