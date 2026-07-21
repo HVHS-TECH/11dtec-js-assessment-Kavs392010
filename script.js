@@ -1098,7 +1098,7 @@ function displayMENU(title, menuArray) {
       "<h3>" + menuArray[i].name + "</h3>" +
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
-      "<button class='menuButton' onclick='addTocart(menuArray[" + i + "]'>Add to Cart</button>" +
+      "<button class='menuButton' onclick='addTocart([" + i + "]menuArray)'>Add to Cart</button>" +
       "</div>";
 
   }
@@ -1130,7 +1130,30 @@ function getFormInput(){
   OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
 }
 
-/*Displays */
+function addTocart (index, menuArray) {
+  CART.push(menuArray[index]);
+
+  OUTPUT.innerHTML= menuArray[index].name + "has been added to your cart!"
+};
+
+function displayCART() {
+  const CART_CONTAINER = document.getElementById("cartContainer");
+
+  CART_CONTAINER.innerHTML += "";
+
+  for (let i = 0; i < CART.length; i++) {
+
+    MENU_CONTAINER.innerHTML +=
+      "<div class='menuItem'>" +
+      "<img src='" + CART[i].image + "'>" +
+      "<h3>" + CART[i].name + "</h3>" +
+      "<h4>$" + CART[i].price + "</h4>" +
+      "</div>";
+
+  }
+};
+
+if (document.getElementById("menuContainer")){
 displayMENU("Breakfast", BREAKFAST);
 displayMENU("Breakfast Specials", BREAKFAST_SPECIALS);
 displayMENU("Breakfast Drinks", BREAKFAST_SPECIALS_DRINK);
@@ -1145,10 +1168,10 @@ displayMENU("Signature Coffee", SIGNATURE_COFFEE);
 displayMENU("Desserts", DESSERTS);
 displayMENU("Drinks", DRINKS);
 displayMENU("Savoury", SAVOURY);
+}
 
-function addTocart (index, menuArray) {
-  CART.push(menuArray[index]);
+if (document.getElementById("menuContainer")){
+  displayCART();
+}
 
-  OUTPUT.innerHTML= menuArray[index].name + "has been added to your cart!"
-};
 
