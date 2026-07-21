@@ -1193,7 +1193,7 @@ function displayCART() {
 
   for (let i = 0; i < CART.length; i++) {
 
-    CART_CONTAINER.innerHTML += "";
+    CART_CONTAINER.innerHTML += 
       "<div class='menuItem'>" 
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
