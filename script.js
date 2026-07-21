@@ -1155,36 +1155,35 @@ else if (title == "Lunch Drinks"){
   menuArray = LUNCH_SPECIALS_DRINK;
 }
 else if (title == "Dinner"){
-  menuArray = "DINNER";
+  menuArray = DINNER;
 }
 else if (title == "Dinner Specials"){
-  menuArray = "DINNER_SPECIALS";
+  menuArray = DINNER_SPECIALS;
 }
 else if (title == "Dinner Drinks"){
-  menuArray = "DINNER_SPECIALS_DRINKS";
+  menuArray = DINNER_SPECIALS_DRINK;
 }
 else if (title == "Coffee"){
-  menuArray = "COFFEE";
+  menuArray = COFFEE;
 }
 else if (title == "Signature Coffee"){
-  menuArray = "SIGNATURE_COFFEE";
+  menuArray = SIGNATURE_COFFEE;
 }
 else if (title == "Desserts"){
-  menuArray = "DESSERTS";
+  menuArray = DESSERTS;
 }
 else if (title == "Drinks"){
-  menuArray = "DRINKS";
+  menuArray = DRINKS;
 }
 else if (title == "Savoury"){
-  menuArray = "SAVOURY";
+  menuArray = SAVOURY;
 }
 
 CART.push(menuArray[index]);
 
 localStorage.setItem("cart", JSON.stringify(CART));
 
-OUTPUT.innerHTML=
-"<p>" + menuArray[index].name + "has been added to your cart!</p>";
+OUTPUT.innerHTML= "<p>" + menuArray[index].name + " has been added to your cart!</p>";
 };
 
 function displayCART() {
