@@ -1181,7 +1181,7 @@ else if (title == "Savoury"){
 
 CART.push(menuArray[index]);
 
-localStorage.setItem("cart", JSON>stringify(CART));
+localStorage.setItem("cart", JSON.stringify(CART));
 
 OUTPUT.innerHTML=
 "<p>" + menuArray[index].name + "has been added to your cart!</p>";
