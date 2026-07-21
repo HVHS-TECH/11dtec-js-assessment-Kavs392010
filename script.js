@@ -1189,12 +1189,12 @@ OUTPUT.innerHTML = "<p>" + menuArray[index].name + " has been added to your cart
 function displayCART() {
   const CART_CONTAINER = document.getElementById("cartContainer");
 
-  CART_CONTAINER.innerHTML += "";
+  CART_CONTAINER.innerHTML = "";
 
   for (let i = 0; i < CART.length; i++) {
 
-    CART_CONTAINER.innerHTML +=
-      "<div class='menuItem'>" +
+    CART_CONTAINER.innerHTML += "";
+      "<div class='menuItem'>" 
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
       "<p>" + CART[i].description + "</p> " +
