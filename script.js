@@ -3,7 +3,10 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 const NAME_FEILD = document.getElementById("nameField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const SEARCH_BAR = document.getElementById("searchBar");
-const CART=[];
+let CART=[];
+if (localStorage.getItem("cart")) {
+    CART = JSON.parse(localStorage.getItem("cart"));
+};
 const CARD=[];
 const CARD_NUMBER_= [];
 
@@ -1098,7 +1101,7 @@ function displayMENU(title, menuArray) {
       "<h3>" + menuArray[i].name + "</h3>" +
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
-      "<button class='menuButton' onclick='addTocart([" + i + "]menuArray)'>Add to Cart</button>" +
+      "<button class='menuButton' onclick='addTocart(" + i + ",\"" + title + "\")'>Add to Cart</button>" +
       "</div>";
 
   }
@@ -1108,7 +1111,7 @@ function searchMenu() {
   let search = SEARCH_BAR.value;
   let found = false;
 
-  for (let i = 0; i < M.length; i++) {
+  for (let i = 0; i < MENU.length; i++) {
 
   if (search === MENU.name) {
   found = true;
@@ -1130,10 +1133,58 @@ function getFormInput(){
   OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
 }
 
-function addTocart (index, menuArray) {
-  CART.push(menuArray[index]);
+function addTocart (index, title) {
+let menuArray
 
-  OUTPUT.innerHTML= menuArray[index].name + "has been added to your cart!"
+if (title == "Breakfast") {
+  menuArray= BREAKFAST;
+}
+else if (title == "Breakfast Specials"){
+  menuArray = BREAKFAST_SPECIALS;
+}
+else if (title == "Breakfast Drinks"){
+  menuArray= BREAKFAST_SPECIALS_DRINK;
+}
+else if (title == "Lunch"){
+  menuArray= LUNCH;
+}
+else if (title == "Lunch Specials"){
+  menuArray = LUNCH_SPECIALS;
+}
+else if (title == "Lunch Drinks"){
+  menuArray = LUNCH_SPECIALS_DRINK;
+}
+else if (title == "Dinner"){
+  menuArray = "DINNER";
+}
+else if (title == "Dinner Specials"){
+  menuArray = "DINNER_SPECIALS";
+}
+else if (title == "Dinner Drinks"){
+  menuArray = "DINNER_SPECIALS_DRINKS";
+}
+else if (title == "Coffee"){
+  menuArray = "COFFEE";
+}
+else if (title == "Signature Coffee"){
+  menuArray = "SIGNATURE_COFFEE";
+}
+else if (title == "Desserts"){
+  menuArray = "DESSERTS";
+}
+else if (title == "Drinks"){
+  menuArray = "DRINKS";
+}
+else if (title == "Savoury"){
+  menuArray = "SAVOURY";
+}
+
+CART.push(menuArray[index]);
+
+localStorage.setItem("cart", JSON>stringify(CART));
+
+OUTPUT.innerHTML=
+"<p>" + menuArray[index].name + "has been added to your cart!</p>";
 };
 
 function displayCART() {
@@ -1143,10 +1194,11 @@ function displayCART() {
 
   for (let i = 0; i < CART.length; i++) {
 
-    MENU_CONTAINER.innerHTML +=
+    CART_CONTAINER.innerHTML +=
       "<div class='menuItem'>" +
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
+      "<p>" + CART[i].desciption + "</p> "
       "<h4>$" + CART[i].price + "</h4>" +
       "</div>";
 
@@ -1170,8 +1222,6 @@ displayMENU("Drinks", DRINKS);
 displayMENU("Savoury", SAVOURY);
 }
 
-if (document.getElementById("menuContainer")){
+if (document.getElementById("cartContainer")){
   displayCART();
 }
-
-
