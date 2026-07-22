@@ -1088,6 +1088,8 @@ const CUSTOMIZE_DINNER_DRINK= [
 const MENU = [BREAKFAST, BREAKFAST_SPECIALS, BREAKFAST_SPECIALS_DRINK, LUNCH, LUNCH_SPECIALS, LUNCH_SPECIALS_DRINK, DINNER, DINNER_SPECIALS, DINNER_SPECIALS_DRINK, COFFEE, SIGNATURE_COFFEE, DESSERTS, DRINKS, SAVOURY, CUSTOMIZE, CUSTOMIZE_BREAKFAST, CUSTOMIZE_BREAKFAST_DRINK, CUSTOMIZE_LUNCH, CUSTOMIZE_LUNCH_DRINK, CUSTOMIZE_DINNER, CUSTOMIZE_DINNER_DRINK];
   
 /***** Functions *****/
+
+
 function displayMENU(title, menuArray) {
   const MENU_CONTAINER = document.getElementById("menuContainer");
 
@@ -1195,7 +1197,7 @@ function displayCART() {
       "</div>";
 
   }
-};
+}; /** After the user adds their items to cart, thye have a option to remove it if they don't want it. The removeFromCart function will help them remove the item and then iit won't be counted in their order.**/
 
 function removeFromCart(index){
   CART.splice(index,1);
@@ -1204,6 +1206,7 @@ function removeFromCart(index){
 
   displayCART();
 }
+
 
 function getFormInput(){
   let customerName = (NAME_FEILD.value);
