@@ -1218,6 +1218,7 @@ function getFormInput(){
   let pocketMoney = Number(POCKET_MONEY_FIELD.value);
 
   // Calculate the total
+  let itemCount = CART.length;
   let total = 0;
   let receipt = "";
 
@@ -1230,7 +1231,7 @@ function getFormInput(){
 
   // Check if the user has enough money to pay
 
-  if (pocketMoney < money){
+  if (pocketMoney < total){
     OUTPUT.innerHTML = "<p>Your total is $ " + total + "</p>" + "<p>You only have $ " + pocketMoney + "<p/>" + "<h2>Not enough money!</h2>";
 
     return;
@@ -1246,9 +1247,9 @@ function getFormInput(){
   "<h2>Receipt </h2>" + 
  "<p><b>Customer Name: </b>" + customerName + "</p>" + 
 
-"<p><b>Payment Method: </b>" + paymentMethod + "</p>" + receipt + "<hr>" +
-
-"<p><b>Total: </b> $ " + total + "</p>" + 
+"<p><b>Payment Method: </b>" + paymentMethod + "</p>" +
+"<p><b>Items Ordered: <b> " + itemCount + "</p>" + 
+"<p><b>Total: </b> $ " + total + "</p>" +  receipt + "<hr>" +
 "<p><b>Money Given: </b> $ " + pocketMoney + "</p>" +  
 "<p><b>Change: </b> $ " + change + "</p>";
 }
