@@ -1110,14 +1110,14 @@ function displayMENU(title, menuArray) {
       "<h4>$" + menuArray[i].price + "</h4>" +
 
       "<div class='quantityButton'>"+
-      "<button onclick='decreaseQunatity("+ i + ")'>-</button>" +
+      "<button onclick='decreaseQuantity("+ i + ")'>-</button>" +
 
       "<span id='quantity" + i + "'>1</span>" +
 
-      "<button onclick='increaseQunatity("+ i + ")'>+</button>" +
+      "<button onclick='increaseQuantity("+ i + ")'>+</button>" +
       "</div>" +
 
-      "<button class='menuButton' onclick='showCustmize(" + i + ",\"" + title + "\")'>Customize</button>" +
+      "<button class='menuButton' onclick='showCustomize(" + i + ",\"" + title + "\")'>Customize</button>" +
       "<button class='menuButton' onclick='addTocart(" + i + ",\"" + title + "\")'>Add to Cart</button>" +
       "</div>";
 
@@ -1310,11 +1310,11 @@ function getFormInput(){
 function increaseQuantity(index){
   QUANTITY[index]++;
 
-  document.getElementById("quantity + index").innerHTML = QUANTITY[index];
+  document.getElementById("quantity" + index).innerHTML = QUANTITY[index];
 }
 
 function decreaseQuantity(index){
-  if (Quantity[index] > 1){
+  if (QUANTITY[index] > 1){
 
   QUANTITY[index]--;
 }
