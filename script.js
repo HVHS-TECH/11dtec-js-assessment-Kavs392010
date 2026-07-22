@@ -1221,7 +1221,7 @@ function getFormInput(){
   let total = 0;
   let receipt = "";
 
-  for (let i = 0; i < CART.length, i ++){
+  for (let i = 0; i < CART.length; i ++){
     total += CART[i].price;
 
   receipt += "<p>" + CART[i].name +
