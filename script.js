@@ -1,12 +1,13 @@
 /***** Variables *****/
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-const NAME_FEILD = document.getElementById("nameField");
-const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const SEARCH_BAR = document.getElementById("searchBar");
 let CART=[];
 if (localStorage.getItem("cart")) {
     CART = JSON.parse(localStorage.getItem("cart"));
 };
+const CUSTOMER_NAME_FEILD = document.getElementById("customerNameField");
+const PAYMENT_METHOD_FIELD = document.getElementById("payment_Method");
+const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const CARD=[];
 const CARD_NUMBER_= [];
 
@@ -1211,7 +1212,7 @@ function removeFromCart(index){
 function getFormInput(){
   let customerName = (NAME_FEILD.value);
   OUTPUT.innerHTML = "<p>User Name: " + customerName + "</p>";
-  let paymentMethod = (PaymentMethod);
+  let paymentMethod = (PAYMENT_METHOD_FIELD.value);
   OUTPUT.innerHTML= "<p>Payment Method: " + paymentMethod + "</p>";
   let pocketMoney = (POCKET_MONEY_FIELD.value);
   OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
