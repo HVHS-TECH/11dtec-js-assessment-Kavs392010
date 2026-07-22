@@ -1140,6 +1140,8 @@ function showCustomize(index,title){
   }
 
   CUSTOMIZE_CONTENT.innerHTML += "<br><button onclick='finishCustomize(" + index + ", \"" + title + "\")'>Save Customization</button>" ; 
+
+  CUSTOMIZE_CONTENT.innerHTML += "<button onclick='closeCustomize()'>Close</button>";
 }
 
 function finishCustomize(index, title){
@@ -1150,16 +1152,20 @@ function finishCustomize(index, title){
   let CUSTOM_BOX = document.getElementById("custom" + i);
 
   if (CUSTOM_BOX.checked){
-selectedExtras += CUSTOMIZE [i].name + ",";
-extraCost += CUSTOMIZE[i].price;
+ selectedExtras += CUSTOMIZE [i].name + ",";
+ extraCost += CUSTOMIZE[i].price;
   }
 }
 
 OUTPUT.innerHTML = "<p><b> Extras: </b>" + selectedExtras + "</p>" + 
 "<p><b> Extra cost: </b> $" + extraCost + "</p>";
 
+closeCustomize();
 }
 
+function closeCustomize() {
+  document.getElementById("customizeConatiner").style.display = "none";
+}
 
 function searchMenu() {
   let search = SEARCH_BAR.value;
