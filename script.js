@@ -1124,6 +1124,43 @@ function displayMENU(title, menuArray) {
   }
 }
 
+function showCustomize(index,title){
+  const CUSTOMIZE_CONTAINER= document.getElementById("customizeContainer");
+
+  const CUSTOMIZE_CONTENT = document.getElementById("customizeContent");
+
+  CUSTOMIZE_CONTAINER.style.display = "block";
+
+  CUSTOMIZE_CONTENT.innerHTML= "<h2>Customize Your Order</h2>";
+
+  for (let i = 0; i < CUSTOMIZE.length; i++){
+  
+  CUSTOMIZE_CONTENT.innerHTML +=
+  "<input type='checkbox' id='custom" + i + "'>" + CUSTOMIZE[i].name + "( + $" + CUSTOMIZE[i].price + ")" + "<br>";
+  }
+
+  CUSTOMIZE_CONTENT.innerHTML += "<br><button onclick='finishCustomize(" + index + ", \"" + title + "\")'>Save Customization</button>" ; 
+}
+
+function finishCustomize(index, title){
+  let selectedExtras = "";
+  let extraCost = 0;
+
+  for(let i = 0; i < CUSTOMIZE.length; i++ ){
+  let CUSTOM_BOX = document.getElementById("custom" + i);
+
+  if (CUSTOM_BOX.checked){
+selectedExtras += CUSTOMIZE [i].name + ",";
+extraCost += CUSTOMIZE[i].price;
+  }
+}
+
+OUTPUT.innerHTML = "<p><b> Extras: </b>" + selectedExtras + "</p>" + 
+"<p><b> Extra cost: </b> $" + extraCost + "</p>";
+
+}
+
+
 function searchMenu() {
   let search = SEARCH_BAR.value;
   let found = false;
