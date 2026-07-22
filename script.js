@@ -1210,12 +1210,47 @@ function removeFromCart(index){
 
 
 function getFormInput(){
+  OUTPUT.innerHTML = "";
+
+  // Get the information from the form
   let customerName = (CUSTOMER_NAME_FIELD.value);
-  OUTPUT.innerHTML = "<p>User Name: " + customerName + "</p>";
   let paymentMethod = (PAYMENT_METHOD_FIELD.value);
-  OUTPUT.innerHTML += "<p>Payment Method: " + paymentMethod + "</p>";
-  let pocketMoney = (POCKET_MONEY_FIELD.value);
-  OUTPUT.innerHTML += "<p>Pocket Money: " + pocketMoney + "</p>";
+  let pocketMoney = Number(POCKET_MONEY_FIELD.value);
+
+  // Calculate the total
+  let total = 0;
+  let receipt = "";
+
+  for (let i = 0; i < CART.length, i ++){
+    total += CART[i].price;
+
+  receipt += "<p>" + CART[i].name +
+  " - $ " + CART[i].price + "</p>";
+  }
+
+  // Check if the user has enough money to pay
+
+  if (pocketMoney < money){
+    OUTPUT.innerHTML = "<p>Your total is $ " + total + "</p>" + "<p>You only have $ " + pocketMoney + "<p/>" + "<h2>Not enough money!</h2>";
+
+    return;
+  }
+
+  // Calculate Change
+  
+  let change= pocketMoney - total;
+
+  // Show receipt
+
+  OUTPUT.innerHTML= 
+  "<h2>Receipt </h2>" + 
+ "<p><b>Customer Name: </b>" + customerName + "</p>" + 
+
+"<p><b>Payment Method: </b>" + paymentMethod + "</p>" + receipt + "<hr>" +
+
+"<p><b>Total: </b> $ " + total + "</p>" + 
+"<p><b>Money Given: </b> $ " + pocketMoney + "</p>" +  
+"<p><b>Change: </b> $ " + change + "</p>";
 }
 
 /**If Statements **/
