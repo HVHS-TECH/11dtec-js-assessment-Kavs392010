@@ -5,7 +5,7 @@ let CART=[];
 if (localStorage.getItem("cart")) {
     CART = JSON.parse(localStorage.getItem("cart"));
 };
-const CUSTOMER_NAME_FEILD = document.getElementById("customerNameField");
+const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
 const PAYMENT_METHOD_FIELD = document.getElementById("paymentMethodField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
 const CARD=[];
