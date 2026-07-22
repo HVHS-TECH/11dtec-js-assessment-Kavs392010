@@ -1260,12 +1260,12 @@ function getFormInput(){
   // Show receipt
 
   OUTPUT.innerHTML= 
+  "<hr>" +
   "<h2>Receipt </h2>" + 
  "<p><b>Customer Name: </b>" + customerName + "</p>" + 
-
 "<p><b>Payment Method: </b>" + paymentMethod + "</p>" +
 "<p><b>Items Ordered: <b> " + itemCount + "</p>" + 
-"<p><b>Total: </b> $ " + total + "</p>" +  receipt + "<hr>" +
+"<p><b>Total: </b> $ " + total + "</p>" + "<hr>" +  receipt + "<hr>" +
 "<p><b>Money Given: </b> $ " + pocketMoney + "</p>" +  
 "<p><b>Change: </b> $ " + change + "</p>";
 }
