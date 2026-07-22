@@ -1164,7 +1164,7 @@ closeCustomize();
 }
 
 function closeCustomize() {
-  document.getElementById("customizeConatiner").style.display = "none";
+  document.getElementById("customizeContainer").style.display = "none";
 }
 
 function searchMenu() {
