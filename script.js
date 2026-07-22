@@ -1210,8 +1210,8 @@ function removeFromCart(index){
 
 
 function getFormInput(){
-  let customerName = (NAME_FEILD.value);
-  OUTPUT.innerHTML += "<p>User Name: " + customerName + "</p>";
+  let customerName = (CUSTOMER_NAME_FIELD.value);
+  OUTPUT.innerHTML = "<p>User Name: " + customerName + "</p>";
   let paymentMethod = (PAYMENT_METHOD_FIELD.value);
   OUTPUT.innerHTML += "<p>Payment Method: " + paymentMethod + "</p>";
   let pocketMoney = (POCKET_MONEY_FIELD.value);
