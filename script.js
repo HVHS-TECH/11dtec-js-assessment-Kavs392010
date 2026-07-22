@@ -1161,6 +1161,12 @@ OUTPUT.innerHTML = "<p><b> Extras: </b>" + selectedExtras + "</p>" +
 "<p><b> Extra cost: </b> $" + extraCost + "</p>";
 
 closeCustomize();
+
+return {
+  extras: selectedExtras,
+  extraCost: extraCost,
+};
+
 }
 
 function closeCustomize() {
@@ -1270,6 +1276,7 @@ function displayCART() {
       "<div class='menuItem'>" +
       "<img src='" + CART[i].image + "'>" +
       "<h3>" + CART[i].name + "</h3>" +
+      "<p><b>Extras: </b>" + CART[i].extras + "</p>" + 
       "<p>" + CART[i].description + "</p> " +
       "<h4>$" + CART[i].price + "</h4>" +
       "<p>Quantity: " + CART[i].quantity + "</p>"
@@ -1302,7 +1309,7 @@ function getFormInput(){
   let receipt = "";
 
   for (let i = 0; i < CART.length; i ++){
-    total += CART[i].price * CART[i].quantity;
+    total += (CART[i].price + CART[i].extraCost)* CART[i].quantity;
 
   receipt += "<p>" + CART[i].name + "x" + CART[i].quantity +
   " - $ " + (CART[i].price * CART[i].quantity) + "</p>";
