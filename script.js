@@ -2,9 +2,13 @@
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 const SEARCH_BAR = document.getElementById("searchBar");
 let CART=[];
+let QUANTITY=[];
 if (localStorage.getItem("cart")) {
     CART = JSON.parse(localStorage.getItem("cart"));
 };
+for (let i= 0; i < 100; i ++){
+  QUANTITY[i]= 1;
+}
 const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
 const PAYMENT_METHOD_FIELD = document.getElementById("paymentMethodField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
@@ -1104,6 +1108,16 @@ function displayMENU(title, menuArray) {
       "<h3>" + menuArray[i].name + "</h3>" +
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
+
+      "<div class='quantityButton'>"+
+      "<button onclick='decreaseQunatity("+ i + ")'>-</button>" +
+
+      "<span id='quantity" + i + "'>1</span>" +
+
+      "<button onclick='increaseQunatity("+ i + ")'>+</button>" +
+      "</div>" +
+
+      "<button class='menuButton' onclick='showCustmize(" + i + ",\"" + title + "\")'>Customize</button>" +
       "<button class='menuButton' onclick='addTocart(" + i + ",\"" + title + "\")'>Add to Cart</button>" +
       "</div>";
 
@@ -1174,7 +1188,9 @@ else if (title == "Savoury"){
   menuArray = SAVOURY;
 }
 
-CART.push(menuArray[index]);
+for (let i = 0; i < QUANTITY[index]; i++){
+  CART.push(menuArray[index]);
+}
 
 localStorage.setItem("cart", JSON.stringify(CART));
 
@@ -1254,6 +1270,20 @@ function getFormInput(){
 "<p><b>Change: </b> $ " + change + "</p>";
 }
 
+function increaseQuantity(index){
+  QUANTITY[index]++;
+
+  document.getElementById("quantity + index").innerHTML = QUANTITY[index];
+}
+
+function decreaseQuantity(index){
+  if (Quantity[index] > 1){
+
+  QUANTITY[index]--;
+}
+
+document.getElementById("quantity" + index).innerHTML = QUANTITY[index];
+}
 /**If Statements **/
 
 if (document.getElementById("menuContainer")){
