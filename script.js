@@ -1231,14 +1231,33 @@ else if (title == "Savoury"){
   menuArray = SAVOURY;
 }
 
-for (let i = 0; i < QUANTITY[index]; i++){
-  CART.push(menuArray[index]);
+let found = false;
+
+for (let i = 0; i < CART.length; i++){
+  if (CART[i].name === menuArray[index].name){
+    CART[i].quantity++;
+    found=true;
+  }
+
+}
+
+if (found == false){
+  let item = {
+    image: menuArray[index].image,
+    name: menuArray[index].name,
+    description: menuArray[index].description,
+    price: menuArray[index].price,
+    quantity: 1
+  };
+
+  CART.push(item);
 }
 
 localStorage.setItem("cart", JSON.stringify(CART));
 
-OUTPUT.innerHTML = "<p>" + menuArray[index].name + " has been added to your cart!</p>";
-};
+OUTPUT.innerHTML = "<p>" + menuArray[index].name + "has been added to your cart! </p>"
+
+}
 
 function displayCART() {
   const CART_CONTAINER = document.getElementById("cartContainer");
@@ -1253,6 +1272,7 @@ function displayCART() {
       "<h3>" + CART[i].name + "</h3>" +
       "<p>" + CART[i].description + "</p> " +
       "<h4>$" + CART[i].price + "</h4>" +
+      "<p>Quantity: " + CART[i].quantity + "</p>"
       "<button class='menuButton' onclick='removeFromCart(" + i + ")'>Remove</button>" +
       "</div>";
 
@@ -1282,10 +1302,10 @@ function getFormInput(){
   let receipt = "";
 
   for (let i = 0; i < CART.length; i ++){
-    total += CART[i].price;
+    total += CART[i].price * CART[i].quantity;
 
-  receipt += "<p>" + CART[i].name +
-  " - $ " + CART[i].price + "</p>";
+  receipt += "<p>" + CART[i].name + "x" + CART[i].quantity +
+  " - $ " + (CART[i].price * CART[i].quantity) + "</p>";
   }
 
   // Check if the user has enough money to pay
