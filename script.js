@@ -1281,8 +1281,8 @@ function displayCART() {
       "<p><b>Extras: </b>" + CART[i].extras + "</p>" + 
       "<p>" + CART[i].description + "</p> " +
       "<h4>$" + CART[i].price + "</h4>" +
-      "<p>Quantity: " + CART[i].quantity + "</p>"
-      "<button onclick='removeFromCart(" + i + ")'>Remove</button>" 
+      "<p>Quantity: " + CART[i].quantity + "</p>" +
+      "<button class='menuButton' onclick='removeFromCart(" + i + ")'>Remove</button>" 
       "</div>";
 
   }
