@@ -1350,6 +1350,7 @@ OUTPUT.innerHTML=
   OUTPUT.innerHTML= 
   "<hr>" +
   "<h2>Receipt </h2>" + 
+  "<hr>" +
  "<p><b>Customer Name: </b>" + customerName + "</p>" + 
 "<p><b>Payment Method: </b>" + paymentMethod + "</p>" +
 "<p><b>Items Ordered: <b> " + itemCount + "</p>" + 
