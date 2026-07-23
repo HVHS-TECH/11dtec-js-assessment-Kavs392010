@@ -1329,7 +1329,14 @@ function getFormInput(){
   // Check if the user has enough money to pay
 
   if (pocketMoney < total){
-    OUTPUT.innerHTML = "<p>Your total is $ " + total + "</p>" + "<p>You only have $ " + pocketMoney + "<p/>" + "<h2>Not enough money!</h2>";
+OUTPUT.innerHTML= 
+  "<hr>" +
+  "<h2>Receipt </h2>" + 
+ "<p><b>Customer Name: </b>" + customerName + "</p>" + 
+"<p><b>Payment Method: </b>" + paymentMethod + "</p>" +
+"<p><b>Items Ordered: <b> " + itemCount + "</p>" + 
+"<p><b>Total: </b> $ " + total + "</p>" + "<hr>" +  receipt + "<hr>" +
+"<p>Your total is $ " + total + "</p>" + "<p>You only have $ " + pocketMoney + "<p/>" + "<h2>Not enough money!</h2>";
 
     return;
   }
