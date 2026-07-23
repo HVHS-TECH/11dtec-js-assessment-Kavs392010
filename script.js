@@ -1330,8 +1330,9 @@ function getFormInput(){
 
   if (pocketMoney < total){
 OUTPUT.innerHTML= 
-  "<hr>" +
+  "<hr>" + "<hr>" +
   "<h2>Receipt </h2>" + 
+  "<hr>" + 
  "<p><b>Customer Name: </b>" + customerName + "</p>" + 
 "<p><b>Payment Method: </b>" + paymentMethod + "</p>" +
 "<p><b>Items Ordered: <b> " + itemCount + "</p>" + 
@@ -1348,7 +1349,7 @@ OUTPUT.innerHTML=
   // Show receipt
 
   OUTPUT.innerHTML= 
-  "<hr>" +
+  "<hr>"+ "<hr>" +
   "<h2>Receipt </h2>" + 
   "<hr>" +
  "<p><b>Customer Name: </b>" + customerName + "</p>" + 
