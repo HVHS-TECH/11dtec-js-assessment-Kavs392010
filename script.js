@@ -1317,8 +1317,11 @@ function getFormInput(){
   receipt += 
   "<p>" + CART[i].name + 
   "x" + CART[i].quantity +
+  "<br>Item: $" + CART[i].price + "x" + CART[i].quantity +
+  "= $" + (CART[i].price * CART[i].quantity)+
   "<br>Extras: " + CART[i].extras +
-  "<br>Extra Cost: $" + CART[i].extraCost + 
+  "<br>Extra Total: $" + CART[i].extraCost + "x" + CART[i].quantity + 
+  "= $" + (CART[i].extraCost * CART[i].quantity) +
   "<br><b>Total Item Cost: $" +
   ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</b></p>";
   }
