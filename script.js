@@ -1320,7 +1320,7 @@ function getFormInput(){
   "<br>Extras: " + CART[i].extras +
   "<br>Extra Cost: $" + CART[i].extraCost + 
   "<br><b>Total Item Cost: $" +
-  "<br> - $ " + ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</b></p>";
+  ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</b></p>";
   }
 
   // Check if the user has enough money to pay
