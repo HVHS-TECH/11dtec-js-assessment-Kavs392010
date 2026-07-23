@@ -1286,7 +1286,7 @@ function displayCART() {
       "</div>";
 
   }
-}; /** After the user adds their items to cart, thye have a option to remove it if they don't want it. The removeFromCart function will help them remove the item and then iit won't be counted in their order.**/
+}; /** After the user adds their items to cart, they have a option to remove it if they don't want it. The removeFromCart function will help them remove the item and then iit won't be counted in their order.**/
 
 function removeFromCart(index){
   CART.splice(index,1);
@@ -1318,7 +1318,8 @@ function getFormInput(){
   "<p>" + CART[i].name + 
   "x" + CART[i].quantity +
   "<br>Extras: " + CART[i].extras +
-  "<br> - $ " + ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</p>";
+  "<br>Extra Cost: $" +
+  "<br> - $ " + ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</b></p><hr>";
   }
 
   // Check if the user has enough money to pay
