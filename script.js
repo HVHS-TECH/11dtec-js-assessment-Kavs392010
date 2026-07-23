@@ -9,6 +9,7 @@ if (localStorage.getItem("cart")) {
 for (let i= 0; i < 100; i ++){
   QUANTITY[i]= 1;
 }
+let CURRENT_CHOICES = [];
 let selectedExtras = "";
 let extraCost = 0;
 const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
@@ -1074,7 +1075,8 @@ const CUSTOMIZE_LUNCH_DRINK= [
   "Iced Tea",
   "Lemonade",
 ]
-
+ 
+/* Dinner Special Choices */
 const CUSTOMIZE_DINNER= [
   "Valerio Gourmet Burger",
   "Valerio Gourmet Burger (V)",
@@ -1125,30 +1127,86 @@ function displayMENU(title, menuArray) {
   }
 }
 
-function showCustomize(index,title){
-  const CUSTOMIZE_CONTAINER= document.getElementById("customizeContainer");
+function showCustomize(index, title){
 
+  const CUSTOMIZE_CONTAINER = document.getElementById("customizeContainer");
   const CUSTOMIZE_CONTENT = document.getElementById("customizeContent");
 
   CUSTOMIZE_CONTAINER.style.display = "block";
 
-  CUSTOMIZE_CONTENT.innerHTML= "<h2>Customize Your Order</h2>";
+  CUSTOMIZE_CONTENT.innerHTML = "<h2>Customize Your Order</h2>";
 
-  for (let i = 0; i < CUSTOMIZE.length; i++){
-  
-  CUSTOMIZE_CONTENT.innerHTML +=
-  "<input type='checkbox' id='custom" + i + "'>" + CUSTOMIZE[i].name + "( + $" + CUSTOMIZE[i].price + ")" + "<br>";
+  CURRENT_CHOICES = [];
+
+  if (title == "Breakfast Specials"){
+    CURRENT_CHOICES = CUSTOMIZE_BREAKFAST;
+  }
+  else if (title == "Breakfast Drinks"){
+    CURRENT_CHOICES = CUSTOMIZE_BREAKFAST_DRINK;
+  }
+  else if (title == "Lunch Specials"){
+    CURRENT_CHOICES = CUSTOMIZE_LUNCH;
+  }
+  else if (title == "Lunch Drinks"){
+    CURRENT_CHOICES = CUSTOMIZE_LUNCH_DRINK;
+  }
+  else if (title == "Dinner Specials"){
+    CURRENT_CHOICES = CUSTOMIZE_DINNER;
+  }
+  else if (title == "Dinner Drinks"){
+    CURRENT_CHOICES = CUSTOMIZE_DINNER_DRINK;
   }
 
-  CUSTOMIZE_CONTENT.innerHTML += "<br><button onclick='finishCustomize(" + index + ", \"" + title + "\")'>Save Customization</button>" ; 
+  if (CURRENT_CHOICES.length > 0){
 
-  CUSTOMIZE_CONTENT.innerHTML += "<button onclick='closeCustomize()'>Close</button>";
+    CUSTOMIZE_CONTENT.innerHTML += "<h3>Choose One</h3>";
+
+    for (let i = 0; i < CURRENT_CHOICES.length; i++){
+
+      CUSTOMIZE_CONTENT.innerHTML +=
+      "<input type='radio' name='mealChoice' id='choice" + i + "'>" +
+      CURRENT_CHOICES[i] +
+      "<br>";
+
+    }
+
+  }
+
+  CUSTOMIZE_CONTENT.innerHTML += "<h3>Add Extras</h3>";
+
+  for (let i = 0; i < CUSTOMIZE.length; i++){
+
+    CUSTOMIZE_CONTENT.innerHTML +=
+    "<input type='checkbox' id='custom" + i + "'>" +
+    CUSTOMIZE[i].name +
+    " (+$" + CUSTOMIZE[i].price + ")" +
+    "<br>";
+
+  }
+
+  CUSTOMIZE_CONTENT.innerHTML +=
+  "<br><button onclick='finishCustomize(" + index + ", \"" + title + "\")'>Save Customization</button>";
+
+  CUSTOMIZE_CONTENT.innerHTML +=
+  "<button onclick='closeCustomize()'>Close</button>";
+
 }
 
 function finishCustomize(index, title){
   selectedExtras = "";
   extraCost = 0;
 
+  // Get the selected meal/drink choice 
+  let selectedChoice = ""
+ for(let i = 0; i < CURRENT_CHOICES.length; i++ ){
+  let CHOICE = document.getElementById("choice" + i);
+
+  if (CHOICE.checked){
+selectedChoice = CURRENT_CHOICES[i];
+  }
+}
+
+// Get selected Extras
   for(let i = 0; i < CUSTOMIZE.length; i++ ){
   let CUSTOM_BOX = document.getElementById("custom" + i);
 
@@ -1158,8 +1216,15 @@ function finishCustomize(index, title){
   }
 }
 
-OUTPUT.innerHTML = "<p><b> Extras: </b>" + selectedExtras + "</p>" + 
-"<p><b> Extra cost: </b> $" + extraCost + "</p>";
+// Save both choice and Extras
+if (selectedChoice != ""){
+  selectedExtras= "Choice: " + selectedChoice + "<br> Extras: " + selectedExtras;
+}
+
+  OUTPUT.innerHTML =
+  "<p><b>Customization Saved!</b></p>" +
+  "<p>" + selectedExtras + "</p>" +
+  "<p><b>Extra Cost:</b> $" + extraCost + "</p>";
 
 closeCustomize();
 
@@ -1238,7 +1303,7 @@ let found = false;
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
     if (CART[i].extras == selectedExtras){
-    CART[i].quantity+ QUANTITY[index];
+    CART[i].quantity+ QUANTITY[title + index];
     found=true;
   }
  }
@@ -1251,7 +1316,7 @@ if (found == false){
     name: menuArray[index].name,
     description: menuArray[index].description,
     price: menuArray[index].price,
-    quantity: QUANTITY[index],
+    quantity: QUANTITY[title + index],
     extras: selectedExtras,
     extraCost : extraCost,
   };
@@ -1360,19 +1425,19 @@ OUTPUT.innerHTML=
 "<p><b>Change: </b> $ " + change + "</p>";
 }
 
-function increaseQuantity(index){
-  QUANTITY[index]++;
+function increaseQuantity(title, index){
+  QUANTITY[title + index]++;
 
-  document.getElementById("quantity" + index).innerHTML = QUANTITY[index];
+  document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
 }
 
-function decreaseQuantity(index){
-  if (QUANTITY[index] > 1){
+function decreaseQuantity(title,index){
+  if (QUANTITY[title + index] > 1){
 
-  QUANTITY[index]--;
+  QUANTITY[title + index]--;
 }
 
-document.getElementById("quantity" + index).innerHTML = QUANTITY[index];
+document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
 }
 /**If Statements **/
 
