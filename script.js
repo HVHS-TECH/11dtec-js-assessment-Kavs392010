@@ -9,11 +9,12 @@ if (localStorage.getItem("cart")) {
 for (let i= 0; i < 100; i ++){
   QUANTITY[i]= 1;
 }
+let selectedExtras = "";
+let extraCost = 0;
 const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
 const PAYMENT_METHOD_FIELD = document.getElementById("paymentMethodField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
-const CARD=[];
-const CARD_NUMBER_= [];
+
 
 /***** Image Slider *****/
  let slideIndex = 0;
@@ -1145,8 +1146,8 @@ function showCustomize(index,title){
 }
 
 function finishCustomize(index, title){
-  let selectedExtras = "";
-  let extraCost = 0;
+  selectedExtras = "";
+  extraCost = 0;
 
   for(let i = 0; i < CUSTOMIZE.length; i++ ){
   let CUSTOM_BOX = document.getElementById("custom" + i);
@@ -1161,11 +1162,6 @@ OUTPUT.innerHTML = "<p><b> Extras: </b>" + selectedExtras + "</p>" +
 "<p><b> Extra cost: </b> $" + extraCost + "</p>";
 
 closeCustomize();
-
-return {
-  extras: selectedExtras,
-  extraCost: extraCost,
-};
 
 }
 
@@ -1241,9 +1237,11 @@ let found = false;
 
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
-    CART[i].quantity++;
+    if (CART[i].extras == selectedExtras){
+    CART[i].quantity+ QUANTITY[index];
     found=true;
   }
+ }
 
 }
 
@@ -1253,7 +1251,9 @@ if (found == false){
     name: menuArray[index].name,
     description: menuArray[index].description,
     price: menuArray[index].price,
-    quantity: 1
+    quantity: QUANTITY[index],
+    extras: selectedExtras,
+    extraCost : extraCost,
   };
 
   CART.push(item);
@@ -1263,6 +1263,8 @@ localStorage.setItem("cart", JSON.stringify(CART));
 
 OUTPUT.innerHTML = "<p>" + menuArray[index].name + "has been added to your cart! </p>"
 
+selectedExtras = "";
+extraCost = 0;
 }
 
 function displayCART() {
@@ -1280,7 +1282,7 @@ function displayCART() {
       "<p>" + CART[i].description + "</p> " +
       "<h4>$" + CART[i].price + "</h4>" +
       "<p>Quantity: " + CART[i].quantity + "</p>"
-      "<button class='menuButton' onclick='removeFromCart(" + i + ")'>Remove</button>" +
+      "<button onclick='removeFromCart(" + i + ")'>Remove</button>" 
       "</div>";
 
   }
@@ -1311,8 +1313,12 @@ function getFormInput(){
   for (let i = 0; i < CART.length; i ++){
     total += (CART[i].price + CART[i].extraCost)* CART[i].quantity;
 
-  receipt += "<p>" + CART[i].name + "x" + CART[i].quantity +
-  " - $ " + (CART[i].price * CART[i].quantity) + "</p>";
+// Receipt
+  receipt += 
+  "<p>" + CART[i].name + 
+  "x" + CART[i].quantity +
+  "<br>Extras: " + CART[i].extras +
+  "<br> - $ " + ((CART[i].price + CART[i].extraCost) * CART[i].quantity) + "</p>";
   }
 
   // Check if the user has enough money to pay
