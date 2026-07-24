@@ -13,6 +13,10 @@ for (let i= 0; i < 100; i ++){
 let selectedExtras = "";
 let extraCost = 0;
 let CURRENT_CHOICES = [];
+let ORDERS = [];
+if (localStorage.getItem("orders")){
+  ORDERS = JSON.parse(localStorage.getItem("orders"));
+}
 const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
 const PAYMENT_METHOD_FIELD = document.getElementById("paymentMethodField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
@@ -1433,7 +1437,7 @@ function getFormInput(){
         OUTPUT.innerHTML = "<p>Your name must be 20 characters or less.</p>";
         return;
     }
-    
+
   // Calculate the total
   let itemCount = CART.length;
   let total = 0;
@@ -1487,6 +1491,19 @@ OUTPUT.innerHTML=
 "<p><b>Total: </b> $ " + total + "</p>" + "<hr>" +  receipt + "<hr>" +
 "<p><b>Money Given: </b> $ " + pocketMoney + "</p>" +  
 "<p><b>Change: </b> $ " + change + "</p>";
+
+let order = {
+  customer: customerName,
+  payment: paymentMethod,
+  items: CART,
+  total: total,
+  money: pocketMoney,
+  change: change,
+};
+
+ORDERS.push(order);
+
+localStorage.setItem("orders", JSON.stringify(ORDERS));
 }
 
 function increaseQuantity(title, index){
@@ -1522,6 +1539,26 @@ function  resetCART(){
   displayCART();
  }
 }
+
+function displayOrders(){
+  const ORDER_CONTAINER = document.getElementById("orderContainer");
+
+  ORDER_CONTAINER.innerHTML = "";
+
+  for (let i = 0; i < ORDERS.length; i++){
+
+    ORDER_CONTAINER.innerHTML +=
+    "<div class= 'menuItem'>" +
+    "<h2>Order " + (i + 1) + "</h2>" +
+       "<h2>Order " + (i + 1) + "</h2>" +
+        "<p><b>Name:</b> " + ORDERS[i].customer + "</p>" +
+        "<p><b>Payment:</b> " + ORDERS[i].payment + "</p>" +
+        "<p><b>Total:</b> $" + ORDERS[i].total + "</p>" +
+        "<p><b>Money Given:</b> $" + ORDERS[i].money + "</p>" +
+        "<p><b>Change:</b> $" + ORDERS[i].change + "</p>" +
+        "</div>";
+  }
+}
 /**If Statements **/
 
 if (document.getElementById("menuContainer")){
@@ -1543,4 +1580,9 @@ displayMENU("Savoury", SAVOURY);
 
 if (document.getElementById("cartContainer")){
   displayCART();
+}
+
+
+if (document.getElementById("orderContainer")){
+  displayORDERS();
 }
