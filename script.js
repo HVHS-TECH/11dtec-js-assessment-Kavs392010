@@ -1260,12 +1260,16 @@ function searchMenu() {
   for (let j = 0; j < MENU[i].length; j++){
 
 
-  if (search === MENU[i].name.toLowerCase()) {
+  if (search === MENU[i][j].name.toLowerCase()) {
   found = true;
-  
+  break;
    }
   }
+  if (found){
+    break;
+  }
 }
+
 if (found) {
   window.location.href = "menu.html";
 }
