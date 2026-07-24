@@ -1504,6 +1504,18 @@ let order = {
 ORDERS.push(order);
 
 localStorage.setItem("orders", JSON.stringify(ORDERS));
+
+CART = [];
+localStorage.setItem("cart", JSON.stringify(CART));
+
+QUANTITY = [];
+for (let i = 0; i < 100; i++){
+  QUANTITY[i] = 1;
+}
+
+if (document.getElementById("cartContainer")){
+  displayCART();
+}
 }
 
 function increaseQuantity(title, index){
@@ -1549,7 +1561,6 @@ function displayOrders(){
 
     ORDER_CONTAINER.innerHTML +=
     "<div class= 'menuItem'>" +
-    "<h2>Order " + (i + 1) + "</h2>" +
        "<h2>Order " + (i + 1) + "</h2>" +
         "<p><b>Name:</b> " + ORDERS[i].customer + "</p>" +
         "<p><b>Payment:</b> " + ORDERS[i].payment + "</p>" +
@@ -1584,5 +1595,5 @@ if (document.getElementById("cartContainer")){
 
 
 if (document.getElementById("orderContainer")){
-  displayORDERS();
+  displayOrders();
 }
