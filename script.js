@@ -1272,6 +1272,7 @@ function searchMenu() {
 
 if (found) {
   window.location.href = "menu.html";
+  OUTPUT.innerHTML = "<p>Item found in menu. Scroll down to see it.</p>";
 }
 else {
   OUTPUT.innerHTML = "<p>Item not found in menu.</p>";}
