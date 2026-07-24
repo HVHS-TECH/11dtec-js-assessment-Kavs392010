@@ -1450,6 +1450,18 @@ function decreaseQuantity(title,index){
 
 document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
 }
+
+function  resetCART(){
+  if (confirm("Are you sure you want to clear your cart?")){
+
+  CART = [];
+  QUANTITY = [];
+
+  localStorage.setItem("cart", JSON.stringify(CART));
+
+  displayCART();
+ }
+}
 /**If Statements **/
 
 if (document.getElementById("menuContainer")){
