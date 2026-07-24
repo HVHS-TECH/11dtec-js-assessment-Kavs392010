@@ -1106,6 +1106,21 @@ function displayMENU(title, menuArray) {
 
   for (let i = 0; i < menuArray.length; i++) {
 
+    let customizeButton = "";
+
+    if (
+      title == "Breakfast Specials" ||
+      title == "Breakfast Drinks" ||
+      title == "Lunch Specials" ||
+      title == "Lunch Drinks" ||
+      title == "Dinner Specials" ||
+      title == "Dinner Drinks" ||
+      title == "Coffee"
+    ) {
+      customizeButton =
+        "<button class='menuButton' onclick='showCustomize(" + i + ", \"" + title + "\")'>Customize</button>";
+    }
+
     MENU_CONTAINER.innerHTML +=
       "<div class='menuItem'>" +
       "<img src='" + menuArray[i].image + "'>" +
@@ -1115,15 +1130,15 @@ function displayMENU(title, menuArray) {
 
       
       "<div class='quantityButton'>"+
-      "<button onclick='decreaseQuantity("+ i + ")'>-</button>" +
+      "<button onclick='decreaseQuantity(\"" + title + "\", " + i + ")'>-</button>" +
 
-      "<span id='quantity" + i + "'>1</span>" +
+      "<span id='quantity" + title + i + "'>1</span>" +
 
-      "<button onclick='increaseQuantity("+ i + ")'>+</button>" +
-      "</div>" +
+      "<button onclick='increaseQuantity(\"" + title + "\", " + i + ")'>+</button>" +
+      "</div>" + 
+      customizeButton +
 
-      "<button class='menuButton' onclick='showCustomize(" + i + ",\"" + title + "\")'>Customize</button>" +
-      "<button class='menuButton' onclick='addTocart(" + i + ",\"" + title + "\")'>Add to Cart</button>" +
+      "<button class='menuButton' onclick='addTocart(" + i + ", \"" + title + "\")'>Add to Cart</button>" +
       "</div>";
 
   }
@@ -1307,7 +1322,7 @@ else if (title == "Savoury"){
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
     if (CART[i].extras == selectedExtras){
-    CART[i].quantity+= QUANTITY[title + index];
+    CART[i].quantity += QUANTITY[title + index];
     found=true;
   }
  }
