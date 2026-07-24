@@ -1256,9 +1256,14 @@ function searchMenu() {
   let found = false;
 
   for (let i = 0; i < MENU.length; i++) {
+  
+  for (let j = 0; j < MENU[i].length; j++){
+
 
   if (search === MENU[i].name.toLowerCase()) {
   found = true;
+  
+   }
   }
 }
 if (found) {
