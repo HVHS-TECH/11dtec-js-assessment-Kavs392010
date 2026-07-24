@@ -9,9 +9,10 @@ if (localStorage.getItem("cart")) {
 for (let i= 0; i < 100; i ++){
   QUANTITY[i]= 1;
 }
-let CURRENT_CHOICES = [];
+
 let selectedExtras = "";
 let extraCost = 0;
+let CURRENT_CHOICES = [];
 const CUSTOMER_NAME_FIELD = document.getElementById("customerNameField");
 const PAYMENT_METHOD_FIELD = document.getElementById("paymentMethodField");
 const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
@@ -1112,6 +1113,7 @@ function displayMENU(title, menuArray) {
       "<p>" + menuArray[i].description + "</p>" +
       "<h4>$" + menuArray[i].price + "</h4>" +
 
+      
       "<div class='quantityButton'>"+
       "<button onclick='decreaseQuantity("+ i + ")'>-</button>" +
 
@@ -1298,12 +1300,14 @@ else if (title == "Savoury"){
   menuArray = SAVOURY;
 }
 
-let found = false;
+ if (QUANTITY[title, index]== unndefined){
+    QUANTITY[title + index]= 1;
+  }
 
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
     if (CART[i].extras == selectedExtras){
-    CART[i].quantity+ QUANTITY[title + index];
+    CART[i].quantity+= QUANTITY[title + index];
     found=true;
   }
  }
@@ -1317,8 +1321,8 @@ if (found == false){
     description: menuArray[index].description,
     price: menuArray[index].price,
     quantity: QUANTITY[title + index],
-    extras: selectedExtras,
-    extraCost : extraCost,
+    extras: selectedExtras || "None",
+    extraCost : extraCost || 0,
   };
 
   CART.push(item);
@@ -1426,12 +1430,19 @@ OUTPUT.innerHTML=
 }
 
 function increaseQuantity(title, index){
+  if (QUANTITY[title, index]== unndefined){
+    QUANTITY[title + index]= 1;
+  }
   QUANTITY[title + index]++;
 
   document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
 }
 
 function decreaseQuantity(title,index){
+   if (QUANTITY[title, index]== unndefined){
+    QUANTITY[title + index]= 1;
+  }
+
   if (QUANTITY[title + index] > 1){
 
   QUANTITY[title + index]--;
