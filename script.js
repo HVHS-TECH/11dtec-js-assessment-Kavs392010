@@ -1094,7 +1094,7 @@ const CUSTOMIZE_DINNER_DRINK= [
   "After-Dinner Affogato",
 ]
 
-const MENU = [BREAKFAST, BREAKFAST_SPECIALS, BREAKFAST_SPECIALS_DRINK, LUNCH, LUNCH_SPECIALS, LUNCH_SPECIALS_DRINK, DINNER, DINNER_SPECIALS, DINNER_SPECIALS_DRINK, COFFEE, SIGNATURE_COFFEE, DESSERTS, DRINKS, SAVOURY, CUSTOMIZE, CUSTOMIZE_BREAKFAST, CUSTOMIZE_BREAKFAST_DRINK, CUSTOMIZE_LUNCH, CUSTOMIZE_LUNCH_DRINK, CUSTOMIZE_DINNER, CUSTOMIZE_DINNER_DRINK];
+const MENU = [BREAKFAST, BREAKFAST_SPECIALS, BREAKFAST_SPECIALS_DRINK, LUNCH, LUNCH_SPECIALS, LUNCH_SPECIALS_DRINK, DINNER, DINNER_SPECIALS, DINNER_SPECIALS_DRINK, COFFEE, SIGNATURE_COFFEE, DESSERTS, DRINKS, SAVOURY];
   
 /***** Functions *****/
 
@@ -1252,34 +1252,42 @@ function closeCustomize() {
 }
 
 function searchMenu() {
+
   let search = SEARCH_BAR.value;
   let found = false;
 
   for (let i = 0; i < MENU.length; i++) {
-  
-  for (let j = 0; j < MENU[i].length; j++){
 
+    for (let j = 0; j < MENU[i].length; j++) {
 
-  if (search === MENU[i][j].name.toLowerCase()) {
-  found = true;
-  break;
-   }
+      if (MENU[i][j].name.toLowerCase() == search) {
+
+        found = true;
+        break;
+
+      }
+
+    }
+
+    if (found) {
+      break;
+    }
   }
-  if (found){
-    break;
-  }
-}
 
-if (found) {
-   OUTPUT.innerHTML = "<p>Item found in menu. Scroll down to see it.</p>";
+  if (found) {
 
-   setTimeout (function(){
-     window.location.href = "menu.html";
-   }, 1500);
+    OUTPUT.innerHTML = "<p>Item found! Opening menu...</p>";
+
+    setTimeout(function () {
+      window.location.href = "menu.html";
+    }, 1500);
+
   }
- 
-else {
-  OUTPUT.innerHTML = "<p>Item not found in menu.</p>";}
+  else {
+
+    OUTPUT.innerHTML = "<p>Item not found in menu.</p>";
+
+  }
 
 }
 
@@ -1409,6 +1417,23 @@ function getFormInput(){
   let paymentMethod = (PAYMENT_METHOD_FIELD.value);
   let pocketMoney = Number(POCKET_MONEY_FIELD.value);
 
+      // Boundary: Cart must have at least 1 item
+    if (CART.length == 0){
+        OUTPUT.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+    }
+
+    // Boundary: Name must be 1-20 characters
+    if (customerName.length < 1){
+        OUTPUT.innerHTML = "<p>Please enter your name.</p>";
+        return;
+    }
+
+    if (customerName.length > 20){
+        OUTPUT.innerHTML = "<p>Your name must be 20 characters or less.</p>";
+        return;
+    }
+    
   // Calculate the total
   let itemCount = CART.length;
   let total = 0;
