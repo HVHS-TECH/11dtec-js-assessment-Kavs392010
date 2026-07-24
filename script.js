@@ -1373,7 +1373,7 @@ if (found == false){
 
 localStorage.setItem("cart", JSON.stringify(CART));
 
-OUTPUT.innerHTML = "<p>" + menuArray[index].name + "has been added to your cart! </p>"
+OUTPUT.innerHTML = "<p>" + menuArray[index].name + " has been added to your cart! </p>"
 
 selectedExtras = "";
 extraCost = 0;
