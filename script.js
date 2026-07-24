@@ -1271,6 +1271,7 @@ else {
 
 function addTocart (index, title) {
 let menuArray
+let found = false;
 
 if (title == "Breakfast") {
   menuArray= BREAKFAST;
@@ -1315,9 +1316,10 @@ else if (title == "Savoury"){
   menuArray = SAVOURY;
 }
 
- if (QUANTITY[title, index]== unndefined){
+ if (QUANTITY[title + index]== undefined){
     QUANTITY[title + index]= 1;
   }
+
 
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
@@ -1337,7 +1339,7 @@ if (found == false){
     price: menuArray[index].price,
     quantity: QUANTITY[title + index],
     extras: selectedExtras || "None",
-    extraCost : extraCost || 0,
+    extraCost : extraCost || 0
   };
 
   CART.push(item);
@@ -1349,6 +1351,10 @@ OUTPUT.innerHTML = "<p>" + menuArray[index].name + "has been added to your cart!
 
 selectedExtras = "";
 extraCost = 0;
+
+QUANTITY[title + index] = 1;
+
+document.getElementById("quantity" + title + index).innerHTML = "1";
 }
 
 function displayCART() {
@@ -1445,16 +1451,16 @@ OUTPUT.innerHTML=
 }
 
 function increaseQuantity(title, index){
-  if (QUANTITY[title, index]== unndefined){
+  if (QUANTITY[title + index]== undefined){
     QUANTITY[title + index]= 1;
   }
   QUANTITY[title + index]++;
 
-  document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
+  document.getElementById("quantity" + title + index).innerHTML = QUANTITY[title + index];
 }
 
 function decreaseQuantity(title,index){
-   if (QUANTITY[title, index]== unndefined){
+   if (QUANTITY[title + index]== undefined){
     QUANTITY[title + index]= 1;
   }
 
@@ -1463,7 +1469,7 @@ function decreaseQuantity(title,index){
   QUANTITY[title + index]--;
 }
 
-document.getElementById("quantity" + index).innerHTML = QUANTITY[title + index];
+document.getElementById("quantity" + title + index).innerHTML = QUANTITY[title + index];
 }
 
 function  resetCART(){
