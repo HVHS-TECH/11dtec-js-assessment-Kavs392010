@@ -1257,7 +1257,7 @@ function searchMenu() {
 
   for (let i = 0; i < MENU.length; i++) {
 
-  if (search === MENU.name) {
+  if (search === MENU[i].name.toLowerCase()) {
   found = true;
   }
 }
