@@ -173,6 +173,28 @@ background-color: #926551;
 color: white;
 } 
 
+/* Sections */
+.about,.hours,.contact{
+  width: 80%;
+  margin: 40px auto;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: #5C2D1F;
+}
+
+.about h2,.hours h2,.contact h2{
+  color: #8B5E3C;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p,.hours p,.contact p{
+  font-size: 25px;
+  text-align: center;
+  margin: 15px 0;
+}
+
 /*Button Styling*/
 .btn-container {
   display: flex;
