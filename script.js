@@ -57,12 +57,12 @@ const BREAKFAST = [
   { name: "Classic Butter Croissant",
     price: 3.50,
     description: "A flaky, buttery croissant filled with rich, creamy butter.",
-    image: ".jpg"
+    image: "Butter Croissant.jpg"
   },
   { name: "Pain au Chocolat",
     price: 6.00,
     description: "A classic French pastry filled with rich, dark chocolate.",
-    image: ".jpg"
+    image: "Pain au chocolat.jpg"
   },
   { name: "Almond Croissant",
     price: 6.50,
