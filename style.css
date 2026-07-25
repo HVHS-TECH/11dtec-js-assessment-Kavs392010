@@ -196,6 +196,29 @@ color: white;
 }
 
 /*Button Styling*/
+.order-btn{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background-color: #8B5E3C;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 10px;
+}
+
+.order-btn:hover{
+   background-color: #6F472D;
+}
+
+.order-container{
+  text-align: center;
+  margin: 40px 0;
+}
+
+
 .btn-container {
   display: flex;
   margin-top: 40px;
