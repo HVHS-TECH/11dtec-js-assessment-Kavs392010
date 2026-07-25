@@ -233,61 +233,61 @@ const LUNCH = [
   name: "Croque Monsieur",
   price: 8.00,
   description: "A classic French sandwich made with ham, cheese, and béchamel sauce, grilled to perfection.",
-  image: ".jpg"
+  image: "Croque Monsieur.jpg"
 },
 {
   name: "Croque Madame",
   price: 9.00,
   description: "A variation of the Croque Monsieur, topped with a fried egg.",
-  image: ".jpg" 
+  image: "Croque Madame.jpg" 
 },
 {
   name: "Quiche Lorraine",
   price: 7.50,
   description: "A savory tart filled with eggs, cream, cheese, and bacon.",
-  image: ".jpg"
+  image: "Quiche Lorraine.jpg"
 },
 {
   name: "Grilled Cheese Sandwich(V)",
   price: 6.00,
   description: "A classic sandwich made with melted cheese between two slices of toasted bread.",
-  image: ".jpg"
+  image: "Grilled Cheese Sandwich(V).jpg"
 },
 {
   name: "Mushroom and Swiss Panini(V)",
   price: 10.00,
   description: "A juicy beef patty topped with sautéed mushrooms and Swiss cheese, served on a toasted bun.",
-  image: ".jpg"
+  image: "Mushroom and Swiss Panini(V).jpg"
 },
 {
   name: "Caprese Panini(V)",
   price: 9.00,
   description: "A sandwich made with fresh mozzarella, tomatoes, and basil, served on a toasted baguette.",
-  image: ".jpg"
+  image: "Caprese Panini(V).jpg"
 },
 {
   name: "Chicken Caesar Wrap",
   price: 8.50,
   description: "A wrap filled with grilled chicken, romaine lettuce, parmesan cheese, and Caesar dressing.", 
-  image: ".jpg"
+  image: "Chicken Caesar Wrap.jpg"
 },
 {
   name: "Mediterranean Veggie Wrap(V)",
   price: 8.00,
   description: "A wrap filled with hummus, roasted vegetables, feta cheese, and mixed greens.",
-  image: ".jpg"
+  image: "Mediterranean Veggie Wrap(V).jpg"
 },
 {
   name: "Mediterranean Chicken Salad",
   price: 9.50,
   description: "A salad made with grilled chicken, mixed greens, cherry tomatoes, cucumbers, red onions, and feta cheese, served with a lemon vinaigrette.",
-  image: ".jpg"
+  image: "Mediterranean Chicken Salad.jpg"
 },
 {
   name: "Mediterranean Wrap",
   price: 9.50,
   description: "A wrap filled with grilled chicken, hummus, roasted vegetables, feta cheese, and mixed greens.",
-  image: ".jpg"
+  image: "Mediterranean Wrap.jpg"
 },
 
 ]
@@ -297,40 +297,40 @@ const LUNCH_SPECIALS = [
     name: "Lunch Combo Meal",
     price: 15.00,
     description: "A hearty lunch combo including a choice of sandwich, salad, and drink.", 
-    image: ".jpg"
+    image: "Lunch Combo Meal.jpg"
   },
 
   {
     name: "Soup and Sandwich Special",
     price: 12.00,
     description: "A special lunch option including a cup of soup and a half sandwich of your choice.",
-    image: ".jpg"
+    image: "Soup and Sandwich Special.jpg"
   },
   {
     name: "Lunch for Two",
     price: 25.00,
     description: "A special lunch option for two people, including a choice of two sandwiches, two salads, and two drinks.",
-    image: ".jpg"
+    image: "Lunch for Two.jpg"
   },
 
   {
     name: "Family Lunch Special",
     price: 40.00,
     description: "A special lunch option for the whole family, including a choice of four sandwiches, four salads, and four drinks.",
-    image: ".jpg"
+    image: "Family Lunch Special.jpg"
   },
 
   {
     name: "Vegetarian Lunch Special",
     price: 12.00,
     description: "A special lunch option for vegetarians, including a choice of vegetarian sandwich, salad, and drink.",
-    image: ".jpg"
+    image: "Vegetarian Lunch Special.jpg"
   },
   {
     name: "Kids Lunch Special",
     price: 10.00,
     description: "A special lunch option for kids, including a choice of sandwich, fruit cup, and small drink.",
-    image: ".jpg"
+    image: "Kids Lunch Special.jpg"
   },
 ]
 
@@ -339,83 +339,83 @@ const LUNCH_SPECIALS_DRINK = [
   name: "Espresso",
   price: 3.00,
   description: "A strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
-  image: ".jpg"
+  image: "images.jpg"
   },
   {
   name: "Cappuccino",
   price: 4.00,
   description: "A coffee drink made with espresso, steamed milk, and milk foam.", 
-  image: ".jpg"
+  image: "Cappuccino.jpg"
   },
   {
     name: "Flat White",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, similar to a latte but with a higher ratio of coffee to milk.",
-    image: ".jpg"
+    image: "Flat White.jpg"
   },
   {
     name: "Latte",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, often topped with foam.",
-    image: ".jpg"
+    image: "Caffe_Latte_cup.jpg"
   },
   { 
     name: "Mocha",
     price: 5.00,
     description: "A coffee drink made with espresso, steamed milk, and chocolate syrup, often topped with whipped cream.",
-    image: ".jpg"
+    image: "Mocha.jpg"
   },
   {
     name: "Americano",
     price: 3.50,
     description: "A coffee drink made by diluting espresso with hot water, resulting in a lighter flavor and lower caffeine content.",
-    image: ".jpg"
+    image: "Americano.jpg"
   },
   {
     name: "Iced Coffee",
     price: 4.00,
     description: "A cold coffee drink made by brewing coffee and then chilling it, often served over ice.",
-    image: ".jpg"
+    image: "Iced coffee.jpg"
   },
   {
     name: "Hot Chocolate",
     price: 3.50,
     description: "A warm, sweet drink made with milk and chocolate, often topped with whipped cream.", 
-    image: ".jpg"
+    image: "Hot chocolate.jpg"
   },
   {
     name: "Chai Latte",
     price: 4.50,
     description: "A spiced tea drink made with black tea, milk, and a blend of spices such as cinnamon, cardamom, and ginger.",
-    image: ".jpg"
+    image: "Chai Latte.jpg"
   },
 
   {
     name: "Iced Tea",
     price: 3.50,
     description: "A refreshing cold beverage made by brewing tea and then chilling it, often served over ice.",
-    image: ".jpg"
+    image: "Iced Tea.jpg"
   },
 
   {
     name: "Lemonade",
     price: 3.00,
     description: "A sweet and tangy beverage made with fresh lemon juice, water, and sugar.",
-    image: ".jpg"
+    image: "Lemonade.jpg"
   },
 
   {
     name: "Long Black",
     price: 3.50,
     description: "A coffee drink made by pouring hot water over a shot of espresso, resulting in a strong and bold flavor.",
-    image: ".jpg"
+    image: "Long Black.jpg"
   },
 
   {
     name: "Iced Latte",
     price: 4.50,
     description: "A cold coffee drink made with espresso and chilled milk, often served over ice.",
-    image: ".jpg"
+    image: "Iced Latte.jpg"
   },
 ]
 
@@ -424,42 +424,42 @@ const DINNER = [
     name: "Steak Frites",
     price: 31.90,
     description: "Grilled premium sirloin steak served with crispy French fries and herb butter.",
-    image: ".jpg"
+    image: "Steak Frites.jpg"
   },
 
   {
     name: "Creamy Garlic Chicken",
     price: 27.90,
     description: "Tender grilled chicken breast in a creamy garlic and parmesan sauce, served with seasonal vegetables.",
-    image: ".jpg"
+    image: "Creamy Garlic Chicken.jpg"
   },
 
   {
     name: "Truffle Mushroom",
     price: 24.90,
     description: "Creamy fettuccine tossed with sautéed mushrooms, parmesan, and truffle oil.",
-    image: ".jpg"
+    image: "Truffle Mushroom.jpg"
   },
 
   {
     name: "Velario Gourmet Burger",
     price: 23.90,
     description: "Premium chicken patty with cheddar, caramelised onions, lettuce, tomato, aioli, and fries.",
-    image: ".jpg"
+    image: "Velario Gourmet Burger.jpg"
   },
 
   {
     name: "Velario Gourmet Burger(V)",
     price: 23.90,
     description: "Premium vegie patty with cheddar, caramelised onions, lettuce, tomato, aioli, and fries.",
-    image: ".jpg"
+    image: "Velario Gourmet Burger(V).jpg"
   },
 
   {
     name: "Mediterranean Vegetable Risotto",
     price: 23.90,
     description: "Creamy Arborio rice with roasted vegetables, parmesan, and fresh herbs.",
-    image: ".jpg"
+    image: "Mediterranean Vegetable Risotto.jpg"
   },
 ]
 
@@ -467,29 +467,29 @@ const DINNER_SPECIALS = [
   {
     name: "Family Dinner Special",
     price: 30.00,
-    desciption: "",
-    image: ".jpg",
+    desciption: "A comforting family dinner packed with flavour, including grilled meats, fresh seasonal sides, and warm artisan bread, made for sharing.",
+    image: "Family Dinner Special.jpg",
   },
 
    {
     name: "Date Night Dinner",
     price: 49.90,
     description: "A romantic dinner for two with two mains, one shared dessert, and two signature drinks.",
-    image: ".jpg",
+    image: "Date Night Dinner.jpg",
   },
 
    {
     name: "Steak Night Special",
     price: 34.90,
     description: "Premium grilled sirloin steak served with fries, salad, and your choice of drink.",
-    image: ".jpg",
+    image: "Steak Night Special.jpg",
   },
 
    {
     name: "Vegetarian Dinner Special",
     price: 26.90,
     description: "A wholesome vegetarian meal with a main, side salad, and a refreshing drink.",
-    image: ".jpg",
+    image: "Vegetarian Dinner Special.jpg",
   },
 ]
 
@@ -498,56 +498,56 @@ const DINNER_SPECIALS_DRINK = [
     name: "Sparkling Rose Spritz (Non-Alcoholic)",
     price: 8.90,
     description: "Sparkling water with rose syrup, fresh strawberries, mint, and lemon.",
-    image: ".jpg",
+    image: "Sparkling Rose Spritz (Non-Alcoholic).jpg",
   },
 
   {
     name: "Citrus Sunset",
     price: 8.50,
     description: "Orange, passionfruit, lemon, and sparkling soda served over ice.",
-    image: ".jpg",
+    image: "Citrus Sunset.jpg",
   },
 
   {
     name: "Berry Royale",
     price: 7.90,
     description: "Fresh berries blended with cranberry juice and sparkling lemonade.",
-    image: ".jpg",
+    image: "Berry Royale.jpg",
   },
 
   {
     name: "Tropical Paradise",
     price: 6.60,
     description: "Pineapple, mango, coconut, and lime blended into a refreshing cooler.",
-    image: ".jpg",
+    image: "Tropical Paradise.jpg",
   },
 
   {
     name: "Lavender Lemon Fizz",
     price: 8.50,
     description: "Fresh lemonade infused with lavender syrup and sparkling water.",
-    image: ".jpg",
+    image: "Lavender Lemon Fizz.jpg",
   },
 
 {
     name: "Blueberry Mint Cooler",
     price: 8.90,
     description: "Blueberries, fresh mint, lime juice, and sparkling soda.",
-    image: ".jpg",
+    image: "Blueberry Mint Cooler.jpg",
   },
 
   {
     name: "Midnight Hot Chocolate",
     price: 7.90,
     description: "Rich Belgian hot chocolate topped with whipped cream and chocolate shavings.",
-    image: ".jpg",
+    image: "Midnight Hot Chocolate.jpg",
   },
 
   {
     name: "After-Dinner Affogato",
     price: 9.90,
     description: "Vanilla bean ice cream with a freshly poured espresso.",
-    image: ".jpg",
+    image: "After-Dinner Affogato.jpg",
   },
 
 
@@ -555,7 +555,7 @@ const DINNER_SPECIALS_DRINK = [
     name: "Hazelnut Hot Chocolate",
     price: 5.50,
     description: "Creamy hot chocolate flavoured with roasted hazelnut and topped with whipped cream.",
-    image: ".jpg",
+    image: "Hazelnut Hot Chocolate.jpg",
   },
 ]
 
@@ -564,83 +564,83 @@ const COFFEE = [
   name: "Esspresso",
   price: 3.00,
   description: "A strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
-  image: ".jpg"
+  image: "images.jpg"
   },
   {
   name: "Cappuccino",
   price: 4.00,
   description: "A coffee drink made with espresso, steamed milk, and milk foam.", 
-  image: ".jpg"
+  image: "Cappuccino.jpg"
   },
   {
     name: "Flat White",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, similar to a latte but with a higher ratio of coffee to milk.",
-    image: ".jpg"
+    image: "Flat White.jpg"
   },
   {
     name: "Latte",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, often topped with foam.",
-    image: ".jpg"
+    image: "Caffe_Latte_cup.jpg"
   },
   { 
     name: "Mocha",
     price: 5.00,
     description: "A coffee drink made with espresso, steamed milk, and chocolate syrup, often topped with whipped cream.",
-    image: ".jpg"
+    image:"Mocha.jpg"
   },
   {
     name: "Americano",
     price: 3.50,
     description: "A coffee drink made by diluting espresso with hot water, resulting in a lighter flavor and lower caffeine content.",
-    image: ".jpg"
+    image: "Americano.jpg"
   },
   {
     name: "Iced Coffee",
     price: 4.00,
     description: "A cold coffee drink made by brewing coffee and then chilling it, often served over ice.",
-    image: ".jpg"
+    image: "Iced coffee.jpg"
   },
   {
     name: "Hot Chocolate",
     price: 3.50,
     description: "A warm, sweet drink made with milk and chocolate, often topped with whipped cream.", 
-    image: ".jpg"
+    image: "Hot chocolate.jpg"
   },
   {
     name: "Chai Latte",
     price: 4.50,
     description: "A spiced tea drink made with black tea, milk, and a blend of spices such as cinnamon, cardamom, and ginger.",
-    image: ".jpg"
+    image: "Chai Latte.jpg"
   },
 
   {
     name: "Iced Tea",
     price: 3.50,
     description: "A refreshing cold beverage made by brewing tea and then chilling it, often served over ice.",
-    image: ".jpg"
+    image: "Iced Tea.jpg"
   },
 
   {
     name: "Double Espresso",
     price: 3.00,
     description: "A strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
-    image: ".jpg"
+    image: "Double Espresso.jpg"
   },
 
   {
     name: "Long Black",
     price: 3.50,
     description: "A coffee drink made by pouring hot water over a shot of espresso, resulting in a strong and bold flavor.",
-    image: ".jpg"
+    image: "Long Black.jpg"
   },
 
   {
     name: "Iced Latte",
     price: 4.50,
     description: "A cold coffee drink made with espresso and chilled milk, often served over ice.",
-    image: ".jpg"
+    image: "Iced Latte.jpg"
   },
 ]
 
