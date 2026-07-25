@@ -781,63 +781,63 @@ const SAVOURY=[
     name: "French Fries",
     price: 4.00,
     description: "With Mayo and Ketchup",
-    img: "French Fries.jpg",
+    image: "French Fries.jpg",
   },
 
 {
   name: "Waffles",
   price: 4.50,
   description: "Waffle with Hershey chocolate syrup and whipped cream",
-  img: "Waffle.jpg",
+  image: "Waffle.jpg",
 },
 
 {
   name: "Pizza",
   price: 10.00,
   description: "6 slices of Margherita",
-  img: "Pizza.jpg",
+  image: "Pizza.jpg",
 },
 
 {
   name: "Wedges",
   price: 3.50,
   description: "With Mayo, Tatua Cheese Sauce and Ketchup",
-  img: "Wedges.jpg",
+  image: "Wedges.jpg",
 },
 
 {
   name: "Garlic Bread",
   price: 5.00,
   description: "Grilled with chesse",
-  img: "Garlic Bread.jpg",
+  image: "Garlic Bread.jpg",
 },
 
 {
   name: "Spring N'roll",
   price: 4.00,
   description: "Vegetable spring roll(6 pieces).",
-  img: "Spring N'roll.jpg",
+  image: "Spring N'roll.jpg",
 },
 
 {
   name: "Mini-Burger",
   price:5.00,
   description: "4 pieces with veggie patty.",
-  img: "Mini-Burger.jpg",
+  image: "Mini-Burger.jpg",
 },
 
 {
   name: "Dumplings (V)",
   price: 10.00,
   description: "8 pieces of them filled with vegetables with sweet chilli and hot sauce.",
-  img: "Dumplings (V).jpg",
+  image: "Dumplings (V).jpg",
 },
 
 {
   name: "Dumplings (NonV)",
   price: 15.00,
   description: "8 pieces of them filled with chicken and ham with sweet chilli and hot sauce.",
-  img: "Dumplings (NonV).jpg",
+  image: "Dumplings (NonV).jpg",
 },
 ]
 
