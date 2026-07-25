@@ -176,55 +176,55 @@ const BREAKFAST_SPECIALS_DRINK = [
   name: "Espresso",
   price: 3.00,
   description: "A strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
-  image: ".jpg"
+  image: "images.jpg"
   },
   {
   name: "Cappuccino",
   price: 4.00,
   description: "A coffee drink made with espresso, steamed milk, and milk foam.", 
-  image: ".jpg"
+  image: "Cappuccino.jpg"
   },
   {
     name: "Flat White",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, similar to a latte but with a higher ratio of coffee to milk.",
-    image: ".jpg"
+    image: "Flat White.jpg"
   },
   {
     name: "Latte",
     price: 4.50,
     description: "A coffee drink made with espresso and steamed milk, often topped with foam.",
-    image: ".jpg"
+    image: "Caffe_Latte_cup.jpg"
   },
   { 
     name: "Mocha",
     price: 5.00,
     description: "A coffee drink made with espresso, steamed milk, and chocolate syrup, often topped with whipped cream.",
-    image: ".jpg"
+    image: "Mocha.jpg"
   },
   {
     name : "Americano",
     price: 3.50,
     description: "A coffee drink made by diluting espresso with hot water, resulting in a lighter flavor and lower caffeine content.",
-    image: ".jpg"
+    image: "Americano.jpg"
   },
   {
     name: "Iced Coffee",
     price: 4.00,
     description: "A cold coffee drink made by brewing coffee and then chilling it, often served over ice.",
-    image: ".jpg"
+    image: "Iced coffee.jpg"
   },
   {
     name: "Hot Chocolate",
     price: 3.50,
     description: "A warm, sweet drink made with milk and chocolate, often topped with whipped cream.", 
-    image: ".jpg"
+    image: "Hot chocolate.jpg"
   },
   {
     name: "Chai Latte",
     price: 4.50,
     description: "A spiced tea drink made with black tea, milk, and a blend of spices such as cinnamon, cardamom, and ginger.",
-    image: ".jpg"
+    image: "Chai Latte.jpg"
   },
 ]
 
