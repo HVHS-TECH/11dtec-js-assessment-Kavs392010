@@ -139,35 +139,35 @@ const BREAKFAST_SPECIALS = [
     name: "Kids Breakfast Special",
     price: 16.00,
     description: "A smaller breakfast option for kids, including a choice of pancake or French toast, and a small drink.",
-    image: ".jpg" 
+    image: "Kids Meal.jpg" 
   },
 
   {
     name: "Family Breakfast Feast",
-    price: 30.00,
+    price: 60.00,
     description: "A large breakfast platter for the whole family, including a variety of pastries, eggs, bacon, sausage, and toast.",
-    image: ".jpg"
+    image: "Family Breakfast.jpg"
   },
 
   {
     name: "Healthy Breakfast Bowl",
     price: 10.00,
     description: "A nutritious breakfast option including a bowl of oatmeal, fresh fruit, a coffee of your choice,and a side of yogurt.",
-    image: ".jpg"
+    image: "Healthy Breakfast.jpg"
   },
 
   {
     name: "Breakfast Vegetarian Special",
     price: 12.00,
     description: "A vegetarian breakfast option including a veggie omelette, toast, and a side of fruit.",
-    image: ".jpg"
+    image: "Breakfast Vegetarian Special.jpg"
   },
 
   {
     name: "Family Vegetarian Breakfast",
     price: 25.00,
     description: "A vegetarian breakfast option for the whole family, including a variety of veggie omelettes, toast, and a side of fruit.",
-    image: ".jpg"
+    image: " Vegetarian Breakfast.jpg"
   },
 ];
 
