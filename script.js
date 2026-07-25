@@ -67,51 +67,51 @@ const BREAKFAST = [
   { name: "Almond Croissant",
     price: 6.50,
     description: "A flaky croissant filled with almond cream and topped with sliced almonds.",
-    image: ".jpg"
+    image: "Almond Croissant.jpg"
   },
   { name: "Raspberry Danish",
     price: 5.00,
     description: "A sweet pastry filled with raspberry jam and cream cheese.",
-    image: ".jpg"
+    image: "Rasberry Danish.jpg"
   },
   { name: "Cinnamon Roll",
     price: 4.50,
     description: "A soft, sweet roll filled with cinnamon and sugar, topped with cream cheese icing.",
-    image: ".jpg"
+    image: "Cinanom Roll.jpg"
   },
   { name: "French Toast",
     price: 5.50,
     description: "Slices of bread soaked in a rich egg mixture and cooked to perfection, served with syrup.",
-    image: ".jpg"
+    image: "French Toast.jpg"
   },
   { name: "Eggs Benedict",
     price: 8.00,
     description: "Poached eggs and Canadian bacon on an English muffin, topped with hollandaise sauce.",
-    image: ".jpg"
+    image: "Eggs benedict.jpg"
   },
   {
   name: "Breakfast Burrito",
   price: 7.50,
   description: "A warm tortilla filled with scrambled eggs, cheese, and your choice of bacon or sausage.",
-  image: ".jpg"
+  image: "Breakfast Burrito.jpg"
   },
   {
   name: "Avocado Toast",
   price: 6.00,
   description: "Toasted bread topped with mashed avocado, cherry tomatoes, and a sprinkle of salt and pepper.",
-  image: ".jpg"
+  image: "Avocado Toast.jpg"
   },
   {
     name: "Breakfast Sandwich",
     price: 5.50,
     description: "A toasted English sandwich filled with scrambled eggs, cheese, and your choice of bacon or sausage.",
-    image: ".jpg"
+    image: "Breakfast Sandwich.jpg"
   },
   {
     name: "Granola Parfait",
     price: 4.50,
     description: "Layers of granola, yogurt, and fresh fruit, served in a glass.",
-    image: ".jpg" 
+    image: "Granola Parfait.jpg" 
   },
 ]
 
@@ -119,20 +119,20 @@ const BREAKFAST_SPECIALS = [
   {
     name: "Breakfast Combo Meal",
     price: 16.00,
-    description: "A hearty breakfast combo including a choice of pastry, coffee, and juice.",
-    image: ".jpg"
+    description: "A hearty breakfast combo including choice of a pastry, coffee, and juice.",
+    image: "Breakfast Combo Meal.jpg"
   },
   {
     name: "Pancake Stack",
     price: 7.00,
     description: "A stack of fluffy pancakes served with butter and syrup.",
-    image: ".jpg"
+    image: "Pancake Stack.jpg"
   },
   {
     name: "Big Breakfast Platter",
     price: 12.00,
     description: "A generous platter including eggs, bacon, sausage, toast, and hash browns.",
-    image: ".jpg"
+    image: "Big Breakfast Platter.jpg"
   },
 
   {
