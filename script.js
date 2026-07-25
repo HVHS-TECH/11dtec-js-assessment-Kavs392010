@@ -780,57 +780,64 @@ const SAVOURY=[
   {
     name: "French Fries",
     price: 4.00,
-    img: ".jpg",
+    descprition: "With Mayo and Ketchup",
+    img: "French Fries.jpg",
   },
 
 {
-  name: "Waffle",
+  name: "Waffles",
   price: 4.50,
-  img: ".jpg",
+  descprition: "Waffle with Hershey chocolate syrup and whipped cream",
+  img: "Waffle.jpg",
 },
 
 {
   name: "Pizza",
   price: 10.00,
-  img: ".jpg",
+  descprition: "6 slices of Margherita",
+  img: "Pizza.jpg",
 },
 
 {
   name: "Wedges",
   price: 3.50,
-  img: ".jpg",
+  description: "With Mayo, Tatua Cheese Sauce and Ketchup",
+  img: "Wedges.jpg",
 },
 
 {
   name: "Garlic Bread",
   price: 5.00,
-  img: ".jpg",
+  descprition: "Grilled with chesse",
+  img: "Garlic Bread.jpg",
 },
 
 {
   name: "Spring N'roll",
   price: 4.00,
-  img: ".jpg",
+  description: "Vegetable spring roll(6 pieces).",
+  img: "Spring N'roll.jpg",
 },
 
 {
   name: "Mini-Burger",
   price:5.00,
-  img: ".jpg",
+  description: "4 pieces with veggie patty.",
+  img: "Mini-Burger.jpg",
 },
 
 {
   name: "Dumplings (V)",
   price: 10.00,
   descprtion: "8 pieces of them filled with vegetables with sweet chilli and hot sauce.",
-  img: ".jpg",
+  img: "Dumplings (V).jpg",
 },
 
 {
   name: "Dumplings (NonV)",
   price: 15.00,
   descprtion: "8 pieces of them filled with chicken and ham with sweet chilli and hot sauce.",
-  img: ".jpg",
+  img: "Dumplings (NonV).jpg",
 },
 ]
 
@@ -942,35 +949,41 @@ const DRINKS = [
    {
     name: "Coca-Cola",
     price: 4.50,
+    descprition: "500ml",
     image: "Coca-Cola.jpg",
   },
 
      {
     name: "Sprite",
     price: 4.50,
+    descprition: "500ml",
     image: "Sprite.jpg",
   },
   {
     name: "Sprite Zero-Sugar",
     price: 5.00,
+    descprition: "500ml",
     image: "Sprite Zero-Sugar.jpg",
   },
 
   {
     name: "Fanta Orange",
     price: 4.50,
+    descprition: "500ml",
     image: "Fanta Orange.jpg",
   },
 
      {
     name: "Ginger Beer",
     price: 5.50,
+    descprition: "1L",
     image: "Ginger Beer.jpg",
   },
 
      {
     name: "Lift Lemon",
     price: 4.50,
+    descprition: "500ml",
     image: "Lift Lemon.jpg",
   },
 
@@ -978,6 +991,7 @@ const DRINKS = [
      {
     name: "Coca-Cola Zero sugar",
     price: 5.00,
+    descprition: "500ml",
     image: "Coke-Football.jpg",
   },
 
