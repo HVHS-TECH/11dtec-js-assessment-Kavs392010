@@ -247,10 +247,12 @@ align-items: Center;
 }
 
 .menu img{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius:10px;
+  width: 300px;
+  min-height: 550pxpx;
+  background: #6b356b;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .menuButton{
