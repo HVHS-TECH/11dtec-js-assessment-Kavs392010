@@ -238,21 +238,23 @@ align-items: Center;
 
 .menuItem{
   width:250px;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #E9AFAD;
   text-align: center;
   padding: 15px;
   border-radius: 15px;
   background-color: #5A2E1F;
+  box-sizing: border-box;
 }
 
 .menu img{
   width: 300px;
-  min-height: 550pxpx;
+  min-height: 550px;
   background: #6b356b;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
+  object-position: cover;
 }
 
 .menuButton{
