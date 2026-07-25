@@ -953,7 +953,7 @@ const DRINKS = [
   {
     name: "Sprite Zero-Sugar",
     price: 5.00,
-    image: "Sprite Zero-Sugar",
+    image: "Sprite Zero-Sugar.jpg",
   },
 
   {
