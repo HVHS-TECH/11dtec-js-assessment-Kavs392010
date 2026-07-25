@@ -815,7 +815,7 @@ const SAVOURY=[
 {
   name: "Spring N'roll",
   price: 4.00,
-  description: "Vegetable spring roll(6 pieces).",
+  description: "Vegetable spring roll (6 pieces)",
   image: "Spring N'roll.jpg",
 },
 
