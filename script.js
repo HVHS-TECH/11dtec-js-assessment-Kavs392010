@@ -780,21 +780,21 @@ const SAVOURY=[
   {
     name: "French Fries",
     price: 4.00,
-    descprition: "With Mayo and Ketchup",
+    description: "With Mayo and Ketchup",
     img: "French Fries.jpg",
   },
 
 {
   name: "Waffles",
   price: 4.50,
-  descprition: "Waffle with Hershey chocolate syrup and whipped cream",
+  description: "Waffle with Hershey chocolate syrup and whipped cream",
   img: "Waffle.jpg",
 },
 
 {
   name: "Pizza",
   price: 10.00,
-  descprition: "6 slices of Margherita",
+  description: "6 slices of Margherita",
   img: "Pizza.jpg",
 },
 
@@ -808,7 +808,7 @@ const SAVOURY=[
 {
   name: "Garlic Bread",
   price: 5.00,
-  descprition: "Grilled with chesse",
+  description: "Grilled with chesse",
   img: "Garlic Bread.jpg",
 },
 
@@ -829,14 +829,14 @@ const SAVOURY=[
 {
   name: "Dumplings (V)",
   price: 10.00,
-  descprtion: "8 pieces of them filled with vegetables with sweet chilli and hot sauce.",
+  description: "8 pieces of them filled with vegetables with sweet chilli and hot sauce.",
   img: "Dumplings (V).jpg",
 },
 
 {
   name: "Dumplings (NonV)",
   price: 15.00,
-  descprtion: "8 pieces of them filled with chicken and ham with sweet chilli and hot sauce.",
+  description: "8 pieces of them filled with chicken and ham with sweet chilli and hot sauce.",
   img: "Dumplings (NonV).jpg",
 },
 ]
