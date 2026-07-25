@@ -649,56 +649,56 @@ const SIGNATURE_COFFEE = [
   name: "Caramel Macchiato",
   price: 5.00,
   description: "A coffee drink made with espresso, steamed milk, and caramel syrup, often topped with whipped cream.",
-  image: ".jpg"
+  image: "Caramel Macchiato.jpg"
  },
  {
   name: "Vanilla Latte",
   price: 5.00,
   description: "A coffee drink made with espresso, steamed milk, and vanilla syrup, often topped with whipped cream.",
-  image: ".jpg"
+  image: "Vanilla Latte.jpg"
  },
  {
   name: "Hazelnut Latte",
   price: 5.00,
   description: "A coffee drink made with espresso, steamed milk, and hazelnut syrup, often topped with whipped cream.",
-  image: ".jpg"
+  image: "Hazelnut Latte.jpg"
  },
  {
   name: "Paris Vanilla Latte",
   price: 7.50,
   description: "A coffee with ich espresso with creamy steamed milk and premium French vanilla, creating a smooth and comforting café classic.",
-  image: ".jpg"
+  image: "Paris Vanilla Latte.jpg"
  },
  {
   name: "Valerio Rose Latte",
   price: 7.20,
   description: "A smooth espresso blended with velvety steamed milk, delicate rose syrup, and a hint of vanilla, finished with dried rose petals.",
-  image: ".jpg"
+  image: "Valerio Rose Latte.jpg"
  },
  {
   name: "Honey Cinnamon Latte",
   price: 7.20,
   description: "Fresh espresso sweetened with natural honey and lightly spiced with cinnamon for a warm, comforting flavour.",
-  image: ".jpg"
+  image: "Honey Cinnamon Latte.jpg"
  },
  {
   name: "Salted Caramel Mocha",
   price: 7.50,
   description: "Espresso, Belgian chocolate, steamed milk, and salted caramel syrup, topped with whipped cream and a caramel drizzle.",
-  image: ".jpg"
+  image: "Salted Caramel Mocha.jpg"
  },
  {
   name: "Orange Mocha",
   price: 7.80,
   descprtion: "Belgian chocolate, espresso, and a subtle hint of orange, inspired by classic French chocolate desserts.",
-  image: ".jpg"
+  image: "Orange Mocha.jpg"
  },
 
  {
   name: "Hazelnut Parline Latte",
   price: 7.80,
   descprtion: "Smooth espresso with roasted hazelnut and praline flavours, topped with lightly frothed milk.",
-  image: ".jpg"
+  image: "Hazelnut Parline Latte.jpg"
  },
 
 
@@ -709,70 +709,70 @@ const DESSERTS = [
     name: "Classic Crème Brûlée",
     price: 10.90,
     description: "Silky vanilla custard finished with a crisp caramelised sugar crust.",
-    image: ".jpg"
+    image: "Classic Crème Brûlée.jpg"
   },
 
   {
     name: "Chocolate Lava Cake",
     price: 11.90,
     description: "Warm chocolate cake with a gooey molten centre, served with vanilla bean ice cream.",
-    image: ".jpg"
+    image: "Chocolate Lava Cake.jpg"
   },
 
  {
   name: "Strawberry Cheesecake",
   price: 10.90,
   description: "Creamy baked cheesecake topped with fresh strawberries and berry coulis.",
-  image: ".jpg",
+  image: "Strawberry Cheesecake.jpg",
  },
 
  {
   name: "Tiramisu",
   price: 10.50,
   description: "Traditional Italian dessert made with espresso-soaked sponge, mascarpone, and cocoa.",
-  image: ".jpg"
+  image: "Tiramisu.jpg"
  },
 
  {
   name: "Lemon Tart",
   price: 9.90,
   description: "Tangy lemon curd in a buttery pastry shell, finished with whipped cream.",
-  image: ".jpg"
+  image: "Lemon Tart.jpg"
  },
 
  {
   name: "Almond Croissant Bread Pudding",
   price: 10.90,
   description: "Warm buttery croissant pudding with vanilla custard and toasted almonds.",
-  image: ".jpg"
+  image: "Almond Bread.jpg"
  },
 
  {
   name: "Chocolate Brownie Sundae",
   price: 5.00,
   description: "Warm chocolate brownie topped with vanilla ice cream, chocolate sauce, and whipped cream.",
-  image: ".jpg"
+  image: "Chocolate Brownie Sundae.jpg"
  },
 
  {
   name: "Vanilla Bean Affogato",
   price: 9.90,
   description: "Vanilla bean ice cream topped with a freshly poured shot of hot espresso.",
-  image: ".jpg"
+  image: "Vanilla Bean Affogato.jpg"
  },
 
  {
   name: "Berry Panna Cotta",
   price: 10.50,
   description: "Smooth vanilla panna cotta served with a mixed berry compote.",
-  image: ".jpg"
+  image: "Berry Panna Cotta.jpg"
  },
 
  {
   name: "Macaron Selection (4 Pieces)",
   price: 10.50,
-  description: "A trio of handcrafted French macarons in seasonal flavours.",
-  image: ".jpg"
+  description: "Four handcrafted French macarons in seasonal flavours.",
+  image: "Macaron Selection (4 Pieces).jpg"
  },
 ]
 
@@ -839,21 +839,21 @@ const DRINKS = [
     name: "Strawberry Lemonade",
     price: 7.50,
     description: "Fresh strawberries blended with lemon juice and sparkling lemonade.",
-    image: ".jpg",
+    image: "Strawberry Lemonade.jpg",
   },
 
    {
     name: "Mango Passion Refresher",
     price: 7.90,
     description: "A tropical blend of mango, passionfruit, and sparkling water.",
-    image: ".jpg",
+    image: "Mango Passion Refresher.jpg",
   },
 
    {
     name: "Peach Iced Tea",
     price: 7.50,
     description: "Brewed peach tea served chilled with fresh peach slices.",
-    image: ".jpg",
+    image: "Peach Iced Tea.jpg",
   },
 
 
@@ -861,7 +861,7 @@ const DRINKS = [
     name: "Watermelon Mint Cooler",
     price: 7.90,
     description: "Fresh watermelon, mint, lime, and sparkling water.",
-    image: ".jpg",
+    image: "Watermelon Mint Cooler.jpg",
   },
 
 
@@ -869,7 +869,7 @@ const DRINKS = [
     name: "Citrus Cooler",
     price: 7.50,
     description: "Orange, lemon, lime, and soda water over ice.",
-    image: ".jpg",
+    image: "Citrus Cooler.jpg",
   },
 
 
@@ -877,7 +877,7 @@ const DRINKS = [
     name: "Chocolate Dream",
     price: 8.90,
     description: "Rich chocolate ice cream blended with milk and topped with whipped cream.",
-    image: ".jpg",
+    image: "Chocolate Dream.jpg",
   },
 
 
@@ -885,7 +885,7 @@ const DRINKS = [
     name: "Strawberry Bliss",
     price: 8.90,
     description: "Creamy strawberry milkshake made with real strawberries.",
-    image: ".jpg",
+    image: "Strawberry Bliss.jpg",
   },
 
 
@@ -893,99 +893,106 @@ const DRINKS = [
     name: "Berry Bliss",
     price: 8.90,
     description: "Strawberries, blueberries, raspberries, banana, and yogurt.",
-    image: ".jpg",
+    image: "Berry Bliss.jpg",
   },
 
      {
     name: "Classic Vanilla Bean",
     price: 8.50,
     description: "Smooth vanilla bean ice cream blended to perfection.",
-    image: ".jpg",
+    image: "Classic Vanilla Bean.jpg",
   },
 
      {
     name: "Cookies & Cream",
     price: 9.20,
     description: "Vanilla ice cream blended with chocolate sandwich cookies.",
-    image: ".jpg",
+    image: "Cookies & Cream.jpg",
   },
 
      {
     name: "Salted Caramel Crunch",
     price: 9.20,
     description: "Creamy caramel milkshake finished with caramel drizzle.",
-    image: ".jpg",
+    image: "Salted Caramel Crunch.jpg",
   },
 
      {
     name: "Mango Paradise",
     price: 8.90,
     description: "Mango, pineapple, banana, and orange juice.",
-    image: ".jpg",
+    image: "Mango Paradise.jpg",
   },
 
      {
     name: "Green Glow",
     price: 9.20,
     description: "Spinach, kiwi, apple, banana, and coconut water.",
-    image: ".jpg",
+    image: "Green Glow.jpg",
   },
 
      {
     name: "Tropical Sunrise",
     price: 8.90,
     description: "Mango, passionfruit, pineapple, and coconut milk.",
-    image: ".jpg",
+    image: "Tropical Sunrise.jpg",
   },
 
 
    {
     name: "Coca-Cola",
     price: 4.50,
-    image: ".jpg",
+    image: "Coca-Cola.jpg",
   },
 
      {
     name: "Sprite",
     price: 4.50,
-    image: ".jpg",
+    image: "Sprite.jpg",
+  },
+  {
+    name: "Sprite Zero-Sugar",
+    price: 5.00,
+    image: "Sprite Zero-Sugar",
   },
 
-     {
+  {
     name: "Fanta Orange",
     price: 4.50,
-    image: ".jpg",
+    image: "Fanta Orange.jpg",
   },
 
      {
     name: "Ginger Beer",
     price: 5.50,
-    image: ".jpg",
+    image: "Ginger Beer.jpg",
   },
 
      {
     name: "Lift Lemon",
     price: 4.50,
-    image: ".jpg",
+    image: "Lift Lemon.jpg",
   },
 
 
      {
-    name: "Coca-cola Zero sugar",
+    name: "Coca-Cola Zero sugar",
     price: 5.00,
-    image: ".jpg",
+    image: "Coke-Football.jpg",
   },
 
   {
     name: "Water",
-    price: 4.50,
-    quantity: "500ml",
+    price: 6.00,
+    description: "1L",
+    image: "Water.jpg",
   },
 
    {
     name: "Sparkling Water",
-    price: 5.50 ,
-    quantity: "500ml",
+    price: 7.50 ,
+    description: "1L",
+    image: "Sparkling Water.jpg",
   },
 ]
 
