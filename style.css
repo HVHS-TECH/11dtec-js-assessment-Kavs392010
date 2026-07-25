@@ -254,7 +254,7 @@ align-items: Center;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  object-position: cover;
+  object-position: fit;
 }
 
 .menuButton{
