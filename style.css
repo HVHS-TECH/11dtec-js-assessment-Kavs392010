@@ -248,13 +248,13 @@ align-items: Center;
 }
 
 .menuItem img{
-  width: 300px;
-  min-height: 550px;
-  background: #6b356b;
-  border-radius: 20px;
-  padding: 20px;
+  width: 220px;
+  height: 180px;
+  border-radius: 12px;
+  padding: 0px;
   text-align: center;
   object-fit: cover;
+  display: block;
 }
 
 .menuButton{
