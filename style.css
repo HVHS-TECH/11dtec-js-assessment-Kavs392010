@@ -247,14 +247,14 @@ align-items: Center;
   box-sizing: border-box;
 }
 
-.menu img{
+.menuItem img{
   width: 300px;
   min-height: 550px;
   background: #6b356b;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  object-position: fit;
+  object-fit: cover;
 }
 
 .menuButton{
@@ -281,7 +281,7 @@ cursor: pointer;
   width: 350px;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solide #3B2A22;
+  border: 2px solid #3B2A22;
   border-radius : 10px;
 background-color: #ffc6d0;
 display: none;
@@ -291,7 +291,7 @@ display: none;
   text-align :center;
 }
 
-.custmosizeButton {
+.customizeButton {
   margin-top: 10px;
   width: 100%;
 }
