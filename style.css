@@ -131,8 +131,8 @@ height: 100%;
 
 
 .hero-slider img{
-width: 650px;
-height: 550px;
+width: 100%;
+height: 50%;
 display: block;
 object-fit: cover;
 }
