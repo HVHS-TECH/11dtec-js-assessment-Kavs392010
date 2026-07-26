@@ -114,8 +114,8 @@ text-underline-offset: 6px;
 /*Hero Section*/
 .hero-slider{
 position: relative;
-width: 800px ;
-height: 700px;
+width: 100%;
+height: 100%;
 overflow: hidden;
 border-radius: 20px;
 margin: 20px auto;
@@ -125,13 +125,13 @@ padding: 10px;
 
 .hero-slide{
 display: none;
-width: 250px;
-height: 200px;
+width: 100%;
+height: 100%;
 }
 
 
 .hero-slider img{
-width: 600px;
+width: 650px;
 height: 550px;
 display: block;
 object-fit: cover;
