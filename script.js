@@ -1133,6 +1133,7 @@ function displayMENU(title, menuArray) {
 
     let customizeButton = "";
 
+    //** Format for display menu */
     if (
       title == "Breakfast Specials" ||
       title == "Breakfast Drinks" ||
@@ -1278,48 +1279,37 @@ function closeCustomize() {
 
 function searchMenu() {
 
-  let search = SEARCH_BAR.value;
-  let found = false;
+    let search = SEARCH_BAR.value.toLowerCase();
+    let found = false;
 
-  for (let i = 0; i < MENU.length; i++) {
+    for (let i = 0; i < MENU.length; i++) {
 
-    for (let j = 0; j < MENU[i].length; j++) {
+        for (let j = 0; j < MENU[i].length; j++) {
 
-      if (MENU[i][j].name.toLowerCase() == search) {
+            if (MENU[i][j].name.toLowerCase() == search) {
 
-        found = true;
-        break;
+                found = true;
 
-      }
+                window.location.href = "menu.html";
+
+                return;
+
+            }
+
+        }
 
     }
 
-    if (found) {
-      break;
-    }
-  }
-
-  if (found) {
-
-    OUTPUT.innerHTML = "<p>Item found! Opening menu...</p>";
-
-    setTimeout(function () {
-      window.location.href = "menu.html";
-    }, 1500);
-
-  }
-  else {
-
-    OUTPUT.innerHTML = "<p>Item not found in menu.</p>";
-
-  }
+    OUTPUT.innerHTML = "Item not found.";
 
 }
+
 
 function addTocart (index, title) {
 let menuArray
 let found = false;
 
+//** These are the arrays which let user click on the item and allows them to add it to cart. */
 if (title == "Breakfast") {
   menuArray= BREAKFAST;
 }
@@ -1367,7 +1357,7 @@ else if (title == "Savoury"){
     QUANTITY[title + index]= 1;
   }
 
-
+//** This is when the user has more than one item in the cart. */
 for (let i = 0; i < CART.length; i++){
   if (CART[i].name === menuArray[index].name){
     if (CART[i].extras == selectedExtras){
@@ -1378,6 +1368,7 @@ for (let i = 0; i < CART.length; i++){
 
 }
 
+//** This is the format of the cart item display. */
 if (found == false){
   let item = {
     image: menuArray[index].image,
@@ -1389,6 +1380,7 @@ if (found == false){
     extraCost : extraCost || 0
   };
 
+  //** This will let user add more item and will display it in the cart. */
   CART.push(item);
 }
 
@@ -1396,14 +1388,17 @@ localStorage.setItem("cart", JSON.stringify(CART));
 
 OUTPUT.innerHTML = "<p>" + menuArray[index].name + " has been added to your cart! </p>"
 
+//** This is when the user has customized it's items and then get charged extra cost for them, which will later on display in the receipt.*/
 selectedExtras = "";
 extraCost = 0;
 
+//** This statment will reset the quantity of the item after it's added to the cart. */
 QUANTITY[title + index] = 1;
 
 document.getElementById("quantity" + title + index).innerHTML = "1";
 }
 
+// ** After the user has added items to the cart, The items will be displayed in the carts page through local storage */
 function displayCART() {
   const CART_CONTAINER = document.getElementById("cartContainer");
 
@@ -1423,8 +1418,9 @@ function displayCART() {
       "</div>";
 
   }
-}; /** After the user adds their items to cart, they have a option to remove it if they don't want it. The removeFromCart function will help them remove the item and then iit won't be counted in their order.**/
+}; 
 
+/** After the user adds their items to cart, they have a option to remove it if they don't want it. The removeFromCart function will help them remove the item and then iit won't be counted in their order.**/
 function removeFromCart(index){
   CART.splice(index,1);
 
@@ -1546,6 +1542,7 @@ if (document.getElementById("cartContainer")){
 }
 }
 
+//** This function increases the quatity by 1 and then adds to cart */
 function increaseQuantity(title, index){
   if (QUANTITY[title + index]== undefined){
     QUANTITY[title + index]= 1;
@@ -1555,6 +1552,7 @@ function increaseQuantity(title, index){
   document.getElementById("quantity" + title + index).innerHTML = QUANTITY[title + index];
 }
 
+//** This function reduces the quatity by 1 and then adds to cart */
 function decreaseQuantity(title,index){
    if (QUANTITY[title + index]== undefined){
     QUANTITY[title + index]= 1;
@@ -1568,6 +1566,7 @@ function decreaseQuantity(title,index){
 document.getElementById("quantity" + title + index).innerHTML = QUANTITY[title + index];
 }
 
+//** This function resets the cart every time the customer places an order */
 function  resetCART(){
   if (confirm("Are you sure you want to clear your cart?")){
 
@@ -1580,6 +1579,7 @@ function  resetCART(){
  }
 }
 
+// ** After the user has place an order the receipt will be displayed in the orders page through local storage */
 function displayOrders(){
   const ORDER_CONTAINER = document.getElementById("orderContainer");
 
