@@ -1448,15 +1448,22 @@ function getFormInput(){
         return;
     }
 
-    // Boundary: Name must be 1-20 characters
-    if (customerName.length < 1){
+    // Boundary: Name must be entered
+    if (customerName.length == 0){
         OUTPUT.innerHTML = "<p>Please enter your name.</p>";
         return;
     }
 
-    if (customerName.length > 20){
-        OUTPUT.innerHTML = "<p>Your name must be 20 characters or less.</p>";
-        return;
+    // Boundary: Payment Method must be selected
+    if (paymentMethod == ""){
+      OUTPUT.innerHTML = "<p> Please select a payment method.</p>";
+      return;
+    }
+
+    //Boundary: Money must be entered but should only contain numbers
+    if (pocketMoney <= 0){
+      OUTPUT.innerHTML = "<p> Please enter a valid amount of money. </p>";
+      return;
     }
 
   // Calculate the total
