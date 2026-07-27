@@ -13,10 +13,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #25140B;
+  background-color: #1F3A5F;
   padding: 10px 20px;
   margin-bottom:30px;
-  border: 2px solid #5A2E1F;
+  border: 2px solid #C8A45D;
   border-radius: 10px 10px;
 }
 
@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #E9AFAD;
+  color: #F7F4EF;
   font-weight: bold;
   font-size: 18px;
 }
@@ -41,16 +41,16 @@
   margin: 15px 0;
   padding: 10px 15px;
   border-radius: 25px 0 0 25px;
-  border: none;
+  border: 2px solid #C8A45D;
   outline: none;
   width: 220px;
-  background-color: #5A2E1F;
-  color: #E9AFAD;
+  background-color: #F2E8D8;
+  color: #2C2C2C;
 }
 
 
 .search-bar input::placeholder {
-  color: #E9AFAD;
+  color: #666;
   opacity: 0.7;
 }
 
@@ -58,14 +58,15 @@
   display: block;
   padding: 10px 15px;
   border: none;
-  background-color: #FFB6C1;
+  background-color: #C8A45D;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
   transition: 0.3s;
+  color: white;
 }
 
 .search-bar button:hover {
-  background-color: #ffc6d0;
+  background-color: #B68E45;
 }
 
 
@@ -83,14 +84,14 @@ nav {
 
 
 nav a {
-  background-color:#3B2A22;
-  color: #f3e9d7; 
+  background-color:#1F3A5F;
+  color: whitesmoke; 
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
   border-radius: 25px;
-  box-shadow: 5px 5px #B08968;
+  box-shadow: 5px 5px #C8A45D;
 margin-right: 10px;
 font-weight: bold;
 text-decoration: none;
@@ -104,8 +105,8 @@ text-decoration: none;
 
 
 nav a:hover {
-background-color: #926551;
-color: white;
+background-color: #C8A45D;
+color: #1F3A5F;
 text-decoration: underline;
 text-decoration-style: unset;
 text-underline-offset: 6px;
@@ -119,7 +120,7 @@ height: 600px;
 overflow: hidden;
 border-radius: 20px;
 margin: 20px auto;
-background-color: #25140B;
+background-color: #EDE6DA;
 }
 
 .hero-slide{
@@ -141,9 +142,9 @@ object-fit: contain;
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
-background-color: #5A2E1F;
+background-color: #1F3A5F;
 border: none;
-color: #D6BFA6;
+color: whitesmoke;
 padding: 10px 15px;
 cursor: pointer;
 border-radius: 10px;
@@ -157,9 +158,9 @@ left: 15px;
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
-background-color: #5A2E1F;
+background-color: #1F3A5F;
 border: none;
-color: #D6BFA6;
+color: whitesmoke;
 padding: 10px 15px;
 cursor: pointer;
 border-radius: 10px;
@@ -170,8 +171,8 @@ right: 15px;
 }
 
 .prev:hover, .next:hover {
-background-color: #926551;
-color: white;
+background-color: #C8A45D;
+color: #1F3A5F;
 } 
 
 /* Sections */
@@ -181,11 +182,11 @@ color: white;
   background: white;
   padding: 35px;
   border-radius: 15px;
-  box-shadow: #5C2D1F;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 .about h2,.hours h2,.contact h2{
-  color: #8B5E3C;
+  color: #1F3A5F;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -201,8 +202,8 @@ color: white;
     display: inline-block;
     margin-top: 25px;
     padding: 15px 35px;
-    background-color: white;
-    color: #8B5E3C;
+    color: white;
+    background-color: #1F3A5F;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -211,7 +212,9 @@ color: white;
 }
 
 .order-btn:hover{
-   background-color: papayawhip;
+   background-color: #C8A45D;
+   color: #1F3A5F;
+
 }
 
 .order-container{
@@ -227,19 +230,18 @@ color: white;
 }
 
 .btn {
-  background-color:#FFB6C1;
-  color: #5A2E1F;
+  background-color:#C8A45D;
+  color:white;
   display: inline-flex;
   padding: 10px 20px;
   border-radius: 25px;
-  box-shadow: 2px 2px 2px 2px#5C2D1F;
+  box-shadow: 2px 2px 2px 2px #8C6A43;
  font-weight: bold;
  text-decoration: none;
 }
 
 .btn:hover{
-    background-color:#FFB6C1;
-  color: #5A2E1F;
+  background-color: #B68E45;
   display: inline-flex;
   padding: 10px 20px;
   border-radius: 25px;
@@ -256,10 +258,10 @@ color: #f3e9d7;
 }
 
 body {
-    background-color: #7A553A;
+    background-color: #F7F4EF;
     font-style: italic;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #D6BFA6;
+    color: #2C2C2C;
 }
 
 /**Header**/
@@ -267,8 +269,8 @@ h1 {
 font:bolder;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: larger;
-color: #7A553A;
-background-color: #ffc6d0;
+color: white;
+background-color: #1F3A5F;
 display:block;
 align-items: Center;
 }
@@ -285,11 +287,11 @@ align-items: Center;
 .menuItem{
   width:250px;
   margin-top: 20px;
-  color: #E9AFAD;
+  color: #2C2C2C;
   text-align: center;
   padding: 15px;
   border-radius: 15px;
-  background-color: #5A2E1F;
+  background-color: whitesmoke;
   box-sizing: border-box;
 }
 
@@ -304,7 +306,8 @@ align-items: Center;
 }
 
 .menuButton{
-background: #FFB6C1;
+background: #C8A45D;
+color: white;
 border:none;
 border-radius: 20px;
 padding:10px 20px;
@@ -313,13 +316,13 @@ cursor: pointer;
 }
 
 .menuButton:hover {
-  background-color: #ffc6d0;
+  background-color: #B68E45;
 }
 
 .menuContainer h2{
   width: 100%;
   text-align: center;
-  color: #E9AFAD;
+  color: #1F3A5F;
   margin: 30px 0 10px;
 }
 
@@ -327,9 +330,9 @@ cursor: pointer;
   width: 350px;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solid #3B2A22;
+  border: 2px solid #C8A45D;
   border-radius : 10px;
-background-color: #ffc6d0;
+background-color: white;
 display: none;
 }
 
@@ -357,11 +360,12 @@ footer {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  background-color: #25140B;
+  background-color: #1F3A5F;
   padding: 10px 20px;
   margin-bottom:30px;
-  border: 2px solid #5A2E1F;
+  border: 2px solid #C8A45D;
   border-radius: 10px 10px;
+  color: white;
 }
 
 
