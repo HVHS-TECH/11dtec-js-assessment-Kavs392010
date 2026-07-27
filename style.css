@@ -25,12 +25,20 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #F8F5F0;
+  color:  #B08D57;
   letter-spacing:1.5px;
   font-size:20px;  
   font-weight: bold;
   font-size: 18px;
   font-family: "Cinzel", serif;;
+}
+
+.logo span{
+    color: #B08D57;
+    font-family: "Cinzel", serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .logo img {
